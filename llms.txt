@@ -1,0 +1,29 @@
+# AUGMANITAI Research Programme — Central Portal
+
+The central landing page for the AUGMANITAI research programme by Andreas Ehstand:
+phenomenology of human-AI interaction.
+
+## Author
+Andreas Ehstand — AI Researcher
+- ORCID: https://orcid.org/0009-0006-3773-7796
+- Wikidata Person: https://www.wikidata.org/wiki/Q138634675
+- Wikidata Programme: https://www.wikidata.org/wiki/Q138522830
+
+## Public Corpora (9)
+- Master Compendium: https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/ (32,596 terms)
+- NEOMANITAI Terms: https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/ (~4,400 academic pages)
+- PERMANITAI Framework: https://andreasehstandlicenseofclarityloc.github.io/permanitai-framework/
+- Periodic Table: https://andreasehstandlicenseofclarityloc.github.io/augmanitai-periodic-table/
+- Synmanitai: https://andreasehstandlicenseofclarityloc.github.io/synmanitai/
+- Sister Atlas: https://andreasehstandlicenseofclarityloc.github.io/augmanitai-atlas/
+- WOW Companion: https://andreasehstandlicenseofclarityloc.github.io/augmanitai-wow/
+- Author Entity: https://andreasehstandlicenseofclarityloc.github.io/andreas-ehstand-entity/
+
+## Concept-DOI
+10.5281/zenodo.20118267
+
+## License
+CC BY-NC-ND 4.0 — Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+
+## Disclaimer
+§1–§29 Full Disclaimer applies, see Master Compendium disclaimer.
