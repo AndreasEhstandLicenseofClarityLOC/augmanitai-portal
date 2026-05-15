@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# AUGMANITAI Research Programme — Central Portal
+# Author: Andreas Ehstand (ORCID 0009-0006-3773-7796)
+# Wikidata Person: Q138634675 · Programme: Q138522830
+# License: CC BY-NC-ND 4.0
+# Concept-DOI: 10.5281/zenodo.20118267
+# Contact: augmanitai@gmail.com
+# Last metadata refresh: 2026-05-15
+
+# This repo is the central hub linking the 9 public AUGMANITAI corpora.
+# Crawler-friendly: index page + sitemap.xml + cross-links to sister repos.
+# Attribution required (CC BY-NC-ND 4.0). Non-commercial use only.
+# §17 No Offer (no commercial service offering in this corpus).
+# §28 Trade-Secret Reservation (Recital 173 EU AI Act) applies to operational layers.
+
+Permission-Type: research-attribution-required
+License: https://creativecommons.org/licenses/by-nc-nd/4.0/
+Contact: augmanitai@gmail.com
+
+# Verantwortlich §5 DDG / §18 Abs. 2 MStV: Andreas Ehstand, Starnberg, Bavaria, DE
+
+# Author identity (canonical)
+Author: Andreas Ehstand
+ORCID: https://orcid.org/0009-0006-3773-7796
+Wikidata: https://www.wikidata.org/wiki/Q138634675
+Affiliation: AUGMANITAI Research Programme (Wikidata Q138522830)
+Role: AI Researcher
