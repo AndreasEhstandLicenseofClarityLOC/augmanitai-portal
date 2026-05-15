@@ -405,6 +405,75 @@ footer .footer-bottom { border-top: 1px solid var(--border); padding-top: 22px; 
   .viewer-canvas { min-height: 420px; }
   .view-mode { height: 420px; }
 }
+
+/* 3D Space View — pure CSS 3D-transforms + vanilla-JS drag/zoom */
+.space-3d {
+  position: relative; width: 100%; height: 100%;
+  perspective: 1200px;
+  background:
+    radial-gradient(ellipse 600px 800px at 50% 50%, rgba(46,224,255,0.05), transparent 60%),
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.4) 0.7px, transparent 1.2px),
+    radial-gradient(circle at 70% 60%, rgba(255,255,255,0.3) 0.7px, transparent 1.2px),
+    radial-gradient(circle at 85% 25%, rgba(255,255,255,0.35) 0.7px, transparent 1.2px),
+    radial-gradient(circle at 30% 80%, rgba(255,255,255,0.25) 0.7px, transparent 1.2px),
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.3) 0.7px, transparent 1.2px);
+  background-size: 100% 100%, 250px 250px, 300px 300px, 280px 280px, 320px 320px, 220px 220px;
+  cursor: grab; overflow: hidden;
+  border-radius: 12px;
+}
+.space-3d:active { cursor: grabbing; }
+.space-hint {
+  position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
+  font-size: 0.78em; color: var(--text-soft); letter-spacing: 0.1em;
+  text-transform: uppercase; pointer-events: none; z-index: 5;
+  background: rgba(5,5,16,0.5); padding: 6px 14px; border-radius: 999px;
+  backdrop-filter: blur(8px);
+}
+.space-stage {
+  position: absolute; inset: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(20deg) rotateY(0deg);
+  transition: transform 60ms linear;
+}
+.space-orbit {
+  position: absolute; top: 50%; left: 50%;
+  width: 380px; height: 380px;
+  margin: -190px 0 0 -190px;
+  border-radius: 50%;
+  border: 1px dashed rgba(46,224,255,0.15);
+  transform-style: preserve-3d;
+}
+.space-bodies { position: absolute; inset: 0; transform-style: preserve-3d; }
+.space-body {
+  position: absolute; top: 50%; left: 50%;
+  width: 60px; height: 60px; margin: -30px 0 0 -30px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8), var(--cyan) 30%, var(--violet) 80%);
+  box-shadow: 0 0 28px rgba(46,224,255,0.4);
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition: transform 200ms, box-shadow 200ms;
+  display: flex; align-items: center; justify-content: center;
+  color: #050510; font-weight: 800; font-size: 0.7em;
+  text-decoration: none; letter-spacing: 0.02em;
+}
+.space-body:hover { transform: translateZ(20px) scale(1.15); box-shadow: 0 0 40px rgba(46,224,255,0.8); }
+.space-body.sun {
+  width: 90px; height: 90px; margin: -45px 0 0 -45px;
+  background: radial-gradient(circle at 35% 35%, #fff, var(--cyan) 30%, var(--violet) 70%);
+  box-shadow: 0 0 60px rgba(46,224,255,0.7);
+  font-size: 0.85em;
+}
+.space-body.color-v { background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8), var(--violet) 30%, var(--pink) 80%); }
+.space-body.color-g { background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8), var(--green) 30%, var(--cyan) 80%); }
+.space-body.color-y { background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8), var(--gold) 30%, var(--pink) 80%); }
+.space-body.color-p { background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8), var(--pink) 30%, var(--violet) 80%); }
+.space-label {
+  position: absolute; top: calc(100% + 6px); left: 50%; transform: translateX(-50%);
+  white-space: nowrap; color: #f2f2fa; font-size: 11px;
+  background: rgba(5,5,16,0.6); padding: 2px 8px; border-radius: 4px;
+  backdrop-filter: blur(4px); pointer-events: none;
+}
 </style>
 </head>
 
@@ -438,7 +507,7 @@ footer .footer-bottom { border-top: 1px solid var(--border); padding-top: 22px; 
   <div class="container">
     <span class="badge"><span class="pulse"></span>Research Programme · Living Document · 2026</span>
     <h1>A field guide to <span class="accent">people working with AI</span></h1>
-    <p class="lead">When humans and AI systems meet, work, learn, and shape each other, recurring patterns appear. This research programme by Andreas Ehstand names and describes those patterns. Nothing prescribed, nothing sold — just a careful, bilingual inventory of what is observed.</p>
+    <p class="lead">When humans and AI systems meet, work, learn, and shape each other, recurring patterns appear. This research programme by Andreas Ehstand names and describes those patterns — a careful, bilingual inventory of what is observed. <strong>Nothing prescribed, nothing sold.</strong></p>
     <div class="ctas">
       <a class="btn primary" href="#universe">
         Show me the universe
@@ -519,6 +588,10 @@ footer .footer-bottom { border-top: 1px solid var(--border); padding-top: 22px; 
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5"/><circle cx="17" cy="16" r="3"/><circle cx="6" cy="18" r="2"/></svg>
           Bubble
         </button>
+        <button class="viewer-tab" data-view="space" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+          3D Space
+        </button>
       </div>
 
       <div class="viewer-canvas">
@@ -583,6 +656,19 @@ footer .footer-bottom { border-top: 1px solid var(--border); padding-top: 22px; 
           <svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" aria-label="Bubble view">
             <g id="bubble-bubbles"></g>
           </svg>
+        </div>
+
+        <!-- 6. 3D SPACE VIEW -->
+        <div class="view-mode" id="view-space" role="tabpanel">
+          <div class="space-3d" id="space3d">
+            <div class="space-hint">Drag to rotate · scroll to zoom</div>
+            <div class="space-stage" id="spaceStage">
+              <div class="space-orbit"></div>
+              <div class="space-orbit" style="transform:rotateX(60deg) rotateY(30deg)"></div>
+              <div class="space-orbit" style="transform:rotateX(120deg) rotateY(-30deg)"></div>
+              <div class="space-bodies" id="spaceBodies"></div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -726,33 +812,32 @@ footer .footer-bottom { border-top: 1px solid var(--border); padding-top: 22px; 
     <div class="author-profile">
       <aside class="author-portrait">
         <div class="avatar"><div class="avatar-inner">AE</div></div>
-        <h3>Andreas Ehstand, M.Ed.</h3>
+        <h3>Andreas Ehstand</h3>
         <div class="role">AI Researcher · Starnberg, Germany</div>
       </aside>
 
       <div class="author-content">
-        <h3>Academic anchors</h3>
+        <h3>Training</h3>
         <ul>
-          <li><strong>TU Dortmund</strong> — Lehrstuhl für Allgemeine Pädagogik (Prof. Dr. Sabine Hornberg)</li>
-          <li><strong>University of Bayreuth</strong> — Sport Science + Hochschuldidaktik</li>
-          <li><strong>FBZHL Bayern</strong> — Zertifikat Hochschullehre (youngest holder)</li>
-          <li>Toni Nadal Excellence Certificate</li>
-          <li>GPTCA / ISMCA / BTV B-Trainer Leistungssport certifications</li>
+          <li>Rhetoric, computer science, German language — university-level training</li>
+          <li>Quantitative and qualitative research methodology</li>
+          <li>Higher-education didactics — Bavarian Higher-Education-Teaching Certificate (youngest holder at the time of award)</li>
+          <li>Former research associate at the Universities of Bayreuth and Dortmund</li>
         </ul>
 
         <h3>Cross-domain background</h3>
         <ul>
-          <li>25 years professional sport coaching</li>
-          <li>Bundesliga tennis coach (multiple years)</li>
-          <li>ITF tournament coach</li>
-          <li>Padel, Pickleball, Golf instruction</li>
+          <li>15+ years international high-performance coaching</li>
+          <li>Bundesliga-level tennis · ITF tournament · Padel · Pickleball · Golf</li>
+          <li>Certified at the Rafa Nadal Academy (Toni Nadal curriculum)</li>
           <li>Co-author of <em>Faszination Padel</em> (2024)</li>
+          <li>50,000+ documented hours of systematic human-AI interaction as empirical base</li>
         </ul>
 
         <h3>What this programme contributes</h3>
         <ul>
           <li>A working language for what happens when people work with AI</li>
-          <li>A bridge between sport-science performance methodology and AI evaluation</li>
+          <li>A <strong>synthesis</strong> of sport-science performance methodology and AI evaluation</li>
           <li>A method for naming patterns from first-person observation rather than retrofitted theory</li>
           <li>A framework that treats humans, AI, robots and mixed teams as substrates that can be observed by the same set of questions</li>
         </ul>
@@ -866,7 +951,8 @@ const CAPTIONS = {
   solar:    '<strong>Solar System:</strong> Main Library is the sun in the centre; the other corpora are planets in orbit. The bigger the planet, the more pages inside. Click any planet.',
   periodic: '<strong>Grid:</strong> Each cell is one corpus. Compact reference layout if you prefer a table over a constellation. Click any cell.',
   tree:     '<strong>Tree:</strong> The same nine corpora grouped into three families — the central library, its mirrors, and its specialist tools. Click any leaf.',
-  bubble:   '<strong>Bubble pack:</strong> Bubble size = number of pages inside that corpus. The Main Library is by far the largest. Click any bubble.'
+  bubble:   '<strong>Bubble pack:</strong> Bubble size = number of pages inside that corpus. The Main Library is by far the largest. Click any bubble.',
+  space:    '<strong>3D Space:</strong> Drag to rotate the whole universe, scroll to zoom. The bright central body is the Main Library; smaller bodies orbit at different distances. Click any body to open the corresponding corpus.'
 };
 
 // === Render Network View ===
@@ -1149,6 +1235,112 @@ const CAPTIONS = {
     sub.textContent = c.size > 100 ? c.size.toLocaleString() : (c.size > 1 ? c.size + ' items' : '');
     a.appendChild(circ); a.appendChild(label); a.appendChild(sub); bubbles.appendChild(a);
   });
+})();
+
+// === Render 3D Space ===
+(function(){
+  const bodies = document.getElementById('spaceBodies');
+  const stage = document.getElementById('spaceStage');
+  const space = document.getElementById('space3d');
+  if (!bodies || !stage || !space) return;
+
+  // Position planets in 3D
+  // sun at center, 8 planets at varying (r, theta, phi)
+  const planets = [
+    { id:'neo',    r:130, theta:30,  phi:0,    color:'color-v' },
+    { id:'perf',   r:140, theta:180, phi:20,   color:'color-g' },
+    { id:'peri',   r:165, theta:80,  phi:-25,  color:'color-y' },
+    { id:'syn',    r:175, theta:225, phi:35,   color:'color-p' },
+    { id:'sister', r:200, theta:130, phi:-15,  color:''        },
+    { id:'wow',    r:210, theta:330, phi:25,   color:'color-v' },
+    { id:'author', r:230, theta:60,  phi:45,   color:'color-y' },
+    { id:'portal', r:230, theta:240, phi:-40,  color:'color-g' }
+  ];
+
+  // sun
+  const sunData = CORPORA.find(c => c.id === 'main');
+  const sun = document.createElement('a');
+  sun.className = 'space-body sun';
+  sun.href = sunData.url;
+  sun.textContent = 'MAIN';
+  sun.style.transform = 'translate3d(0,0,0)';
+  const sunLabel = document.createElement('div'); sunLabel.className='space-label'; sunLabel.textContent='Main library';
+  sun.appendChild(sunLabel);
+  bodies.appendChild(sun);
+
+  // planets
+  planets.forEach(p => {
+    const c = CORPORA.find(x => x.id === p.id);
+    if (!c) return;
+    const t = p.theta * Math.PI / 180;
+    const f = p.phi   * Math.PI / 180;
+    const x = p.r * Math.cos(f) * Math.cos(t);
+    const z = p.r * Math.cos(f) * Math.sin(t);
+    const y = p.r * Math.sin(f);
+    const a = document.createElement('a');
+    a.className = 'space-body ' + (p.color || '');
+    a.href = c.url;
+    a.textContent = c.short.toUpperCase().slice(0, 3);
+    a.style.transform = `translate3d(${x.toFixed(1)}px, ${y.toFixed(1)}px, ${z.toFixed(1)}px)`;
+    const lab = document.createElement('div');
+    lab.className = 'space-label';
+    lab.textContent = c.short;
+    a.appendChild(lab);
+    bodies.appendChild(a);
+  });
+
+  // Drag-to-rotate
+  let rotX = 20, rotY = 0;
+  let scale = 1;
+  let dragging = false, startX = 0, startY = 0;
+  function setStage(){
+    stage.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg) scale(${scale})`;
+  }
+  space.addEventListener('mousedown', e => {
+    if (e.target.closest('.space-body')) return;
+    dragging = true; startX = e.clientX; startY = e.clientY;
+    space.style.cursor = 'grabbing';
+  });
+  document.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    rotY += (e.clientX - startX) * 0.35;
+    rotX = Math.max(-85, Math.min(85, rotX - (e.clientY - startY) * 0.35));
+    startX = e.clientX; startY = e.clientY;
+    setStage();
+  });
+  document.addEventListener('mouseup', () => { dragging = false; space.style.cursor='grab'; });
+
+  // Touch
+  space.addEventListener('touchstart', e => {
+    if (e.target.closest('.space-body')) return;
+    dragging = true; startX = e.touches[0].clientX; startY = e.touches[0].clientY;
+  }, { passive: true });
+  document.addEventListener('touchmove', e => {
+    if (!dragging) return;
+    rotY += (e.touches[0].clientX - startX) * 0.35;
+    rotX = Math.max(-85, Math.min(85, rotX - (e.touches[0].clientY - startY) * 0.35));
+    startX = e.touches[0].clientX; startY = e.touches[0].clientY;
+    setStage();
+  }, { passive: true });
+  document.addEventListener('touchend', () => { dragging = false; });
+
+  // Scroll zoom
+  space.addEventListener('wheel', e => {
+    e.preventDefault();
+    scale = Math.max(0.5, Math.min(2.2, scale + (e.deltaY < 0 ? 0.08 : -0.08)));
+    setStage();
+  }, { passive: false });
+
+  // Auto-spin when idle
+  let lastInteract = Date.now();
+  function tick(){
+    if (Date.now() - lastInteract > 2000 && !dragging) { rotY += 0.12; setStage(); }
+    requestAnimationFrame(tick);
+  }
+  ['mousedown','mousemove','touchstart','wheel'].forEach(ev => {
+    space.addEventListener(ev, () => lastInteract = Date.now(), { passive: true });
+  });
+  tick();
 })();
 
 // === Tab switcher ===
