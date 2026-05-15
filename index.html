@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <title>AUGMANITAI — Research Programme · Andreas Ehstand</title>
-<meta name="description" content="AUGMANITAI Research Programme — phenomenology of human-AI interaction. 32,596 defined terms · 9 sister corpora · ISO-aligned terminology engineering. By Andreas Ehstand (AI Researcher).">
+<meta name="description" content="The AUGMANITAI Research Programme by Andreas Ehstand — descriptive terminology of human-AI interaction. Nine connected corpora, browsable five different ways.">
 
 <link rel="canonical" href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-portal/">
 <meta name="author" content="Andreas Ehstand">
@@ -13,20 +13,21 @@
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AUGMANITAI Research Programme">
-<meta property="og:title" content="AUGMANITAI — Phenomenology of Human-AI Interaction">
-<meta property="og:description" content="32,596 defined terms · 9 sister corpora · ISO-aligned terminology by Andreas Ehstand.">
+<meta property="og:title" content="AUGMANITAI — Research Programme by Andreas Ehstand">
+<meta property="og:description" content="A research programme on the phenomenology of human-AI interaction. Nine connected corpora, browsable five different ways.">
 <meta property="og:url" content="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-portal/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AUGMANITAI Research Programme">
-<meta name="twitter:description" content="Phenomenology of Human-AI Interaction · By Andreas Ehstand">
+<meta name="twitter:description" content="Phenomenology of human-AI interaction — by Andreas Ehstand">
 
+<!-- Machine-readable identity remains in JSON-LD (not visible to humans) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ResearchProject",
   "@id": "https://andreasehstandlicenseofclarityloc.github.io/augmanitai-portal/#programme",
   "name": "AUGMANITAI Research Programme",
-  "description": "Phenomenology of Human-AI Interaction. Comprehensive descriptive terminology of how humans and AI systems meet, work, learn, and shape each other. 32,596 defined terms across 165 research-domain clusters.",
+  "description": "Descriptive terminology of human-AI interaction phenomena. Nine connected corpora.",
   "url": "https://andreasehstandlicenseofclarityloc.github.io/augmanitai-portal/",
   "identifier": "https://www.wikidata.org/wiki/Q138522830",
   "founder": {
@@ -44,35 +45,32 @@
 </script>
 
 <style>
-/* AUGMANITAI Portal Design System — Andreas Ehstand 2026. All CSS authored from scratch. */
+/* AUGMANITAI Portal — original CSS, no frameworks. Andreas Ehstand 2026. */
 :root {
-  --bg: #060611;
-  --bg-2: #0a0a18;
-  --surface: #11111f;
-  --surface-2: #16162a;
-  --border: #1f1f38;
-  --border-2: #2a2a4a;
-  --text: #f0f0fa;
+  --bg: #050510;
+  --bg-2: #08081a;
+  --surface: #10101f;
+  --surface-2: #15152a;
+  --border: #1d1d38;
+  --border-2: #292950;
+  --text: #f2f2fa;
   --text-dim: #a8a8c8;
-  --text-soft: #76769a;
-  --cyan: #00e0ff;
-  --violet: #8b5cff;
-  --gold: #ffc857;
-  --green: #4fea8a;
-  --pink: #ff5d9b;
-  --grad-1: linear-gradient(135deg, #00e0ff 0%, #8b5cff 60%, #ff5d9b 100%);
-  --grad-2: linear-gradient(135deg, #ffc857 0%, #ff5d9b 50%, #8b5cff 100%);
-  --grad-3: linear-gradient(135deg, #4fea8a 0%, #00e0ff 100%);
-  --grad-soft: linear-gradient(180deg, rgba(0,224,255,0.04) 0%, transparent 100%);
-  --glow-cyan: 0 0 48px rgba(0,224,255,0.25);
-  --glow-violet: 0 0 48px rgba(139,92,255,0.22);
+  --text-soft: #74749a;
+  --cyan: #2ee0ff;
+  --violet: #8a5dff;
+  --pink: #ff5fa0;
+  --gold: #ffcc6a;
+  --green: #54ec96;
+  --grad-1: linear-gradient(135deg, #2ee0ff 0%, #8a5dff 60%, #ff5fa0 100%);
+  --grad-2: linear-gradient(135deg, #54ec96 0%, #2ee0ff 100%);
+  --grad-3: linear-gradient(135deg, #ffcc6a 0%, #ff5fa0 100%);
+  --grad-soft: linear-gradient(180deg, rgba(46,224,255,0.04) 0%, transparent 100%);
+  --glow-c: 0 0 50px rgba(46,224,255,0.25);
   --r-card: 16px;
   --r-pill: 999px;
   --t-fast: 200ms cubic-bezier(0.16, 1, 0.3, 1);
   --t-med: 400ms cubic-bezier(0.16, 1, 0.3, 1);
-  --t-slow: 800ms cubic-bezier(0.16, 1, 0.3, 1);
-  --font-display: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
-  --font-mono: ui-monospace, 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+  --font-sys: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -84,529 +82,328 @@ html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-display);
+  font-family: var(--font-sys);
   font-size: 16px;
   line-height: 1.6;
-  font-feature-settings: "kern", "liga", "calt", "ss01", "ss02";
+  font-feature-settings: "kern", "liga", "calt", "ss01";
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   min-height: 100vh;
 }
 
-/* Animated cosmic background — pure CSS, no images */
+/* Cosmic backdrop */
 .cosmos {
   position: fixed; inset: 0; z-index: -2;
   background:
-    radial-gradient(ellipse 600px 800px at 15% 5%, rgba(0,224,255,0.12), transparent 50%),
-    radial-gradient(ellipse 700px 900px at 85% 90%, rgba(139,92,255,0.10), transparent 50%),
-    radial-gradient(ellipse 400px 600px at 60% 40%, rgba(255,93,155,0.05), transparent 50%);
+    radial-gradient(ellipse 700px 900px at 12% 8%, rgba(46,224,255,0.14), transparent 50%),
+    radial-gradient(ellipse 800px 1000px at 88% 92%, rgba(138,93,255,0.12), transparent 50%),
+    radial-gradient(ellipse 500px 700px at 55% 45%, rgba(255,95,160,0.06), transparent 50%);
   pointer-events: none;
 }
 .cosmos::before {
   content: ''; position: absolute; inset: 0;
-  background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.4) 0.5px, transparent 1px),
-                    radial-gradient(circle at 60% 70%, rgba(255,255,255,0.3) 0.5px, transparent 1px),
-                    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.25) 0.5px, transparent 1px),
-                    radial-gradient(circle at 40% 80%, rgba(255,255,255,0.2) 0.5px, transparent 1px),
-                    radial-gradient(circle at 10% 60%, rgba(255,255,255,0.3) 0.5px, transparent 1px),
-                    radial-gradient(circle at 90% 50%, rgba(255,255,255,0.2) 0.5px, transparent 1px);
+  background-image:
+    radial-gradient(circle at 18% 28%, rgba(255,255,255,0.4) 0.6px, transparent 1.4px),
+    radial-gradient(circle at 62% 68%, rgba(255,255,255,0.3) 0.6px, transparent 1.4px),
+    radial-gradient(circle at 82% 18%, rgba(255,255,255,0.25) 0.6px, transparent 1.4px),
+    radial-gradient(circle at 38% 78%, rgba(255,255,255,0.2) 0.6px, transparent 1.4px),
+    radial-gradient(circle at 8% 58%, rgba(255,255,255,0.3) 0.6px, transparent 1.4px),
+    radial-gradient(circle at 92% 48%, rgba(255,255,255,0.18) 0.6px, transparent 1.4px);
   background-size: 600px 600px, 800px 800px, 700px 700px, 900px 900px, 550px 550px, 750px 750px;
-  opacity: 0.7;
-  animation: drift 120s linear infinite;
+  opacity: 0.6;
+  animation: drift 140s linear infinite;
 }
 @keyframes drift {
   from { transform: translate(0,0); }
-  to { transform: translate(-150px, -100px); }
+  to   { transform: translate(-180px, -120px); }
 }
 
-/* Spotlight follows mouse — pure CSS via custom property */
+/* Mouse spotlight */
 .spotlight {
-  position: fixed; inset: 0; z-index: -1;
-  pointer-events: none;
-  background: radial-gradient(circle 400px at var(--mx, 50%) var(--my, 50%),
-              rgba(0,224,255,0.06), transparent 70%);
+  position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(circle 420px at var(--mx, 50%) var(--my, 50%),
+              rgba(46,224,255,0.07), transparent 70%);
   transition: background 80ms;
 }
 
 .skip-link {
   position: absolute; left: -999px; top: 0;
   background: var(--cyan); color: var(--bg);
-  padding: 10px 14px; border-radius: 6px;
-  font-weight: 600; font-size: 14px; z-index: 9999;
-  text-decoration: none;
+  padding: 10px 14px; border-radius: 6px; font-weight: 600; font-size: 14px; z-index: 9999;
 }
 .skip-link:focus { left: 8px; top: 8px; }
 
-/* Container */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-/* Top Nav */
+/* Top nav */
 nav.top {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   padding: 14px 0;
-  background: rgba(6,6,17,0.7);
+  background: rgba(5,5,16,0.7);
   backdrop-filter: saturate(180%) blur(24px);
   -webkit-backdrop-filter: saturate(180%) blur(24px);
-  border-bottom: 1px solid rgba(31,31,56,0.6);
+  border-bottom: 1px solid rgba(29,29,56,0.6);
 }
-nav.top .inner {
-  max-width: 1200px; margin: 0 auto; padding: 0 24px;
-  display: flex; align-items: center; gap: 32px;
-}
+nav.top .inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 24px; }
 .logo {
   display: inline-flex; align-items: center; gap: 10px;
   text-decoration: none; color: var(--text);
   font-weight: 800; font-size: 1.05em; letter-spacing: -0.01em;
 }
-.logo-mark {
-  width: 30px; height: 30px;
-  background: var(--grad-1);
-  border-radius: 8px;
-  position: relative;
-  box-shadow: var(--glow-cyan);
-}
-.logo-mark::before {
-  content: ''; position: absolute; inset: 4px;
-  background: var(--bg); border-radius: 5px;
-}
-.logo-mark::after {
-  content: ''; position: absolute; inset: 8px;
-  background: var(--grad-1); border-radius: 3px;
-}
+.logo-mark { width: 30px; height: 30px; background: var(--grad-1); border-radius: 8px; position: relative; box-shadow: var(--glow-c); }
+.logo-mark::before { content: ''; position: absolute; inset: 4px; background: var(--bg); border-radius: 5px; }
+.logo-mark::after  { content: ''; position: absolute; inset: 8px; background: var(--grad-1); border-radius: 3px; }
 .logo .logo-text {
-  background: var(--grad-1);
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: 0.02em;
+  background: var(--grad-1); -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; letter-spacing: 0.02em;
 }
-nav.top .links { display: flex; gap: 4px; flex: 1; justify-content: flex-end; }
+nav.top .links { display: flex; gap: 4px; flex: 1; justify-content: flex-end; flex-wrap: wrap; }
 nav.top a.link {
   color: var(--text-dim); text-decoration: none;
-  padding: 8px 14px; border-radius: 8px;
-  font-size: 0.92em; font-weight: 500;
+  padding: 8px 14px; border-radius: 8px; font-size: 0.92em; font-weight: 500;
   transition: all var(--t-fast);
 }
 nav.top a.link:hover { color: var(--text); background: var(--surface); }
 
-/* HERO — Cinematic */
+/* Hero */
 .hero {
-  min-height: 92vh;
+  min-height: 88vh;
   display: flex; flex-direction: column; justify-content: center;
-  padding: 140px 24px 80px 24px;
-  position: relative;
+  padding: 130px 24px 70px 24px;
 }
 .hero .badge {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 6px 14px; border-radius: var(--r-pill);
-  background: rgba(0,224,255,0.06);
-  border: 1px solid rgba(0,224,255,0.2);
-  font-size: 0.78em; letter-spacing: 0.15em;
-  text-transform: uppercase; color: var(--cyan); font-weight: 600;
-  margin-bottom: 32px; backdrop-filter: blur(4px);
+  background: rgba(46,224,255,0.06); border: 1px solid rgba(46,224,255,0.2);
+  font-size: 0.78em; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--cyan); font-weight: 600; margin-bottom: 28px;
   width: max-content; max-width: 100%;
 }
-.hero .badge .pulse {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--cyan); position: relative;
-}
-.hero .badge .pulse::after {
-  content: ''; position: absolute; inset: -4px;
-  border-radius: 50%; border: 2px solid var(--cyan);
-  animation: pulse 2.5s ease-out infinite;
-}
-@keyframes pulse {
-  0%   { opacity: 1; transform: scale(1); }
-  100% { opacity: 0; transform: scale(2.5); }
-}
+.hero .badge .pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); position: relative; }
+.hero .badge .pulse::after { content: ''; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid var(--cyan); animation: pulse 2.5s ease-out infinite; }
+@keyframes pulse { 0%{opacity:1;transform:scale(1)} 100%{opacity:0;transform:scale(2.5)} }
+
 .hero h1 {
-  font-size: clamp(2.8em, 7vw, 5.8em);
+  font-size: clamp(2.6em, 6.5vw, 5.4em);
   line-height: 0.96; letter-spacing: -0.035em;
-  font-weight: 800; max-width: 18ch; margin-bottom: 32px;
+  font-weight: 800; max-width: 16ch; margin-bottom: 28px;
 }
 .hero h1 .accent {
-  background: var(--grad-1);
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
+  background: var(--grad-1); -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; display: inline-block;
 }
-.hero p.lead {
-  font-size: clamp(1.1em, 1.7vw, 1.35em);
-  line-height: 1.5; max-width: 760px;
-  color: var(--text-dim); margin-bottom: 44px;
-  font-weight: 400;
-}
+.hero p.lead { font-size: clamp(1.1em, 1.6vw, 1.32em); line-height: 1.5; max-width: 720px; color: var(--text-dim); margin-bottom: 36px; }
 .hero .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
 
-.btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 14px 22px; border-radius: 10px;
-  font-size: 0.98em; font-weight: 600; text-decoration: none;
-  border: 1px solid transparent; cursor: pointer;
-  font-family: var(--font-display); letter-spacing: -0.005em;
-  transition: all var(--t-fast); position: relative; overflow: hidden;
-}
-.btn.primary { background: var(--grad-1); color: #060611; font-weight: 700; }
-.btn.primary::before {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(135deg, #fff 0%, transparent 50%);
-  opacity: 0; transition: opacity var(--t-fast);
-}
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 22px; border-radius: 10px; font-size: 0.98em; font-weight: 600; text-decoration: none; border: 1px solid transparent; cursor: pointer; font-family: var(--font-sys); transition: all var(--t-fast); position: relative; overflow: hidden; }
+.btn.primary { background: var(--grad-1); color: #050510; font-weight: 700; }
+.btn.primary::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, #fff 0%, transparent 50%); opacity: 0; transition: opacity var(--t-fast); }
 .btn.primary:hover::before { opacity: 0.18; }
-.btn.primary:hover { transform: translateY(-2px); box-shadow: var(--glow-cyan); }
-.btn.ghost {
-  color: var(--text); background: rgba(255,255,255,0.04);
-  border-color: var(--border-2); backdrop-filter: blur(8px);
-}
+.btn.primary:hover { transform: translateY(-2px); box-shadow: var(--glow-c); }
+.btn.ghost { color: var(--text); background: rgba(255,255,255,0.04); border-color: var(--border-2); backdrop-filter: blur(8px); }
 .btn.ghost:hover { background: var(--surface); border-color: var(--cyan); color: var(--cyan); }
 .btn svg { width: 16px; height: 16px; }
 
-/* Stats Strip — Below Hero */
-.stats-strip {
-  margin-top: 80px;
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1px; background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: var(--r-card);
-  overflow: hidden;
-}
-.stat-cell {
-  padding: 24px 20px; background: var(--surface);
-  text-align: center; transition: background var(--t-fast);
-}
-.stat-cell:hover { background: var(--surface-2); }
-.stat-cell .num {
-  font-size: clamp(1.8em, 3.5vw, 2.4em);
-  font-weight: 800; line-height: 1;
-  letter-spacing: -0.03em;
-  font-variant-numeric: tabular-nums;
-  background: var(--grad-1);
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: block;
-}
-.stat-cell .lbl {
-  font-size: 0.78em; color: var(--text-soft);
-  margin-top: 8px; text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
 /* Sections */
-section {
-  padding: 100px 24px;
-  scroll-margin-top: 80px;
-  position: relative;
-}
+section { padding: 80px 24px; scroll-margin-top: 80px; position: relative; }
 section .container { padding: 0; }
-.section-eyebrow {
-  display: inline-block; font-size: 0.78em;
-  letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--cyan); font-weight: 600;
-  margin-bottom: 16px;
-}
-section h2 {
-  font-size: clamp(1.8em, 4vw, 2.8em);
-  line-height: 1.05; letter-spacing: -0.025em;
-  font-weight: 800; margin-bottom: 16px; max-width: 22ch;
-}
-section h2 .accent {
-  background: var(--grad-1);
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-section p.intro {
-  font-size: 1.08em; line-height: 1.6;
-  color: var(--text-dim); max-width: 760px; margin-bottom: 48px;
-}
+.eyebrow { display: inline-block; font-size: 0.78em; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cyan); font-weight: 600; margin-bottom: 14px; }
+section h2 { font-size: clamp(1.8em, 4vw, 2.6em); line-height: 1.05; letter-spacing: -0.025em; font-weight: 800; margin-bottom: 16px; max-width: 22ch; }
+section h2 .accent { background: var(--grad-1); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+section p.intro { font-size: 1.08em; line-height: 1.6; color: var(--text-dim); max-width: 760px; margin-bottom: 40px; }
 
-/* Corpora Constellation Grid */
+/* What-is-this Section: simple explanation */
+.simple-explain {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  margin-bottom: 50px;
+}
+@media (max-width: 900px) { .simple-explain { grid-template-columns: 1fr; } }
+.explain-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-card); padding: 28px;
+}
+.explain-card h3 { font-size: 1.2em; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.01em; }
+.explain-card h3 .em { color: var(--cyan); }
+.explain-card p { color: var(--text-dim); font-size: 0.98em; }
+.explain-card ul { padding-left: 0; list-style: none; margin-top: 10px; }
+.explain-card li { padding: 6px 0 6px 22px; position: relative; color: var(--text-dim); font-size: 0.95em; }
+.explain-card li::before { content: ''; position: absolute; left: 0; top: 14px; width: 12px; height: 1px; background: var(--cyan); }
+
+/* === UNIVERSE VIEWER === */
+.viewer {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-card); padding: 24px;
+  position: relative; overflow: hidden;
+}
+.viewer-tabs {
+  display: flex; gap: 4px; flex-wrap: wrap;
+  margin-bottom: 20px; padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.viewer-tab {
+  padding: 8px 14px; background: var(--bg-2);
+  border: 1px solid var(--border); border-radius: 8px;
+  font-size: 0.88em; font-weight: 500; color: var(--text-dim);
+  cursor: pointer; font-family: var(--font-sys);
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: all var(--t-fast);
+}
+.viewer-tab svg { width: 14px; height: 14px; }
+.viewer-tab:hover { color: var(--text); border-color: var(--border-2); }
+.viewer-tab.active { background: var(--grad-1); color: #050510; border-color: transparent; font-weight: 700; }
+.viewer-canvas {
+  width: 100%; min-height: 560px; max-height: 700px;
+  border-radius: 12px; background: var(--bg-2);
+  position: relative; overflow: hidden;
+}
+.view-mode { display: none; width: 100%; height: 560px; position: relative; }
+.view-mode.active { display: block; }
+.view-mode svg { width: 100%; height: 100%; display: block; }
+.view-caption {
+  margin-top: 14px; font-size: 0.92em; color: var(--text-dim);
+  padding: 10px 12px; background: rgba(46,224,255,0.04);
+  border-left: 3px solid var(--cyan); border-radius: 4px;
+}
+.view-caption strong { color: var(--text); }
+
+/* Nodes & edges interaction */
+.node-circle { cursor: pointer; transition: filter var(--t-fast), r var(--t-fast); }
+.node-circle:hover { filter: drop-shadow(0 0 10px var(--cyan)) brightness(1.3); }
+.node-label { font-family: var(--font-sys); pointer-events: none; user-select: none; }
+.edge-line { transition: opacity var(--t-fast), stroke-width var(--t-fast); }
+.edge-line:hover { stroke-width: 2; }
+
+/* Corpus cards (simplified, no backend tactic) */
 .corpora-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 16px;
+  display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px;
 }
 .corpus-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--r-card);
-  padding: 28px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-card); padding: 26px;
+  text-decoration: none; color: inherit; display: block;
   position: relative; overflow: hidden;
   transition: all var(--t-med);
-  text-decoration: none; color: inherit;
-  display: block;
 }
-.corpus-card::before {
-  content: ''; position: absolute; inset: 0;
-  background: var(--grad-1); opacity: 0;
-  transition: opacity var(--t-med);
-  pointer-events: none;
-}
-.corpus-card::after {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-  background: var(--grad-1); opacity: 0;
-  transition: opacity var(--t-med);
-}
-.corpus-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--border-2);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-}
+.corpus-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--grad-1); opacity: 0; transition: opacity var(--t-med); }
+.corpus-card:hover { transform: translateY(-4px); border-color: var(--border-2); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
 .corpus-card:hover::after { opacity: 1; }
-.corpus-card:hover::before { opacity: 0.03; }
-
-.corpus-card.featured { grid-column: span 12; padding: 48px; }
-.corpus-card.wide { grid-column: span 8; }
+.corpus-card.featured { grid-column: span 12; padding: 36px; }
 .corpus-card.half { grid-column: span 6; }
 .corpus-card.third { grid-column: span 4; }
 @media (max-width: 900px) {
-  .corpus-card.featured, .corpus-card.wide, .corpus-card.half, .corpus-card.third {
-    grid-column: span 12;
-  }
+  .corpus-card.featured, .corpus-card.half, .corpus-card.third { grid-column: span 12; }
 }
-
 .corpus-icon {
-  width: 48px; height: 48px;
+  width: 44px; height: 44px;
   display: inline-flex; align-items: center; justify-content: center;
-  background: rgba(0,224,255,0.08);
-  border: 1px solid rgba(0,224,255,0.18);
-  border-radius: 12px; margin-bottom: 20px;
+  background: rgba(46,224,255,0.08); border: 1px solid rgba(46,224,255,0.18);
+  border-radius: 10px; margin-bottom: 16px;
   color: var(--cyan);
-  position: relative; z-index: 1;
 }
-.corpus-icon svg { width: 24px; height: 24px; }
-.corpus-card.featured .corpus-icon {
-  width: 64px; height: 64px; border-radius: 16px; margin-bottom: 24px;
-}
-.corpus-card.featured .corpus-icon svg { width: 32px; height: 32px; }
-
-.corpus-card h3 {
-  font-size: clamp(1.1em, 1.6vw, 1.35em);
-  font-weight: 700; letter-spacing: -0.02em;
-  margin-bottom: 6px; position: relative; z-index: 1;
-}
-.corpus-card.featured h3 { font-size: clamp(1.6em, 2.6vw, 2em); margin-bottom: 12px; }
-
-.corpus-card .corpus-tag {
-  display: inline-block; padding: 3px 10px;
-  background: var(--bg-2); border: 1px solid var(--border);
-  border-radius: var(--r-pill);
-  font-size: 0.78em; color: var(--text-soft);
-  margin-bottom: 14px;
-  font-variant-numeric: tabular-nums;
-}
-.corpus-card p {
-  font-size: 0.95em; color: var(--text-dim); line-height: 1.55;
-  position: relative; z-index: 1;
-}
-.corpus-card.featured p { font-size: 1.05em; max-width: 56ch; }
-.corpus-card .corpus-cta {
-  display: inline-flex; align-items: center; gap: 6px;
-  margin-top: 18px; color: var(--cyan);
-  font-weight: 600; font-size: 0.9em;
-  transition: gap var(--t-fast); position: relative; z-index: 1;
-}
+.corpus-icon svg { width: 22px; height: 22px; }
+.corpus-card.featured .corpus-icon { width: 56px; height: 56px; margin-bottom: 20px; }
+.corpus-card.featured .corpus-icon svg { width: 28px; height: 28px; }
+.corpus-card h3 { font-size: 1.18em; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 6px; }
+.corpus-card.featured h3 { font-size: 1.7em; margin-bottom: 10px; }
+.corpus-card .corpus-sub { display: inline-block; padding: 3px 10px; background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--r-pill); font-size: 0.78em; color: var(--text-soft); margin-bottom: 12px; }
+.corpus-card p { font-size: 0.95em; color: var(--text-dim); line-height: 1.55; }
+.corpus-card.featured p { font-size: 1.02em; max-width: 60ch; }
+.corpus-card .corpus-cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; color: var(--cyan); font-weight: 600; font-size: 0.9em; transition: gap var(--t-fast); }
 .corpus-card:hover .corpus-cta { gap: 12px; }
 .corpus-card .corpus-cta svg { width: 14px; height: 14px; }
 
-/* Programme Branches */
-.branches {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-}
+/* Six Branches */
+.branches { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
 .branch {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--r-card);
-  padding: 24px; transition: all var(--t-fast);
-  border-left: 3px solid var(--cyan);
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-card); padding: 22px;
+  text-decoration: none; color: inherit; display: block;
+  transition: all var(--t-fast); border-left: 3px solid var(--cyan);
 }
 .branch:nth-child(2) { border-left-color: var(--violet); }
 .branch:nth-child(3) { border-left-color: var(--green); }
 .branch:nth-child(4) { border-left-color: var(--gold); }
 .branch:nth-child(5) { border-left-color: var(--pink); }
 .branch:nth-child(6) { border-left-color: var(--cyan); }
-.branch:hover { transform: translateX(4px); border-color: var(--border-2); }
-.branch h4 {
-  font-size: 1.08em; font-weight: 700; letter-spacing: -0.01em;
-  margin-bottom: 6px;
-}
-.branch .branch-tag { font-size: 0.8em; color: var(--text-soft); margin-bottom: 12px; }
+.branch:hover { transform: translateX(4px); border-color: var(--border-2); background: var(--surface-2); }
+.branch h4 { font-size: 1.08em; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 4px; }
+.branch .branch-sub { font-size: 0.78em; color: var(--text-soft); margin-bottom: 10px; }
 .branch p { font-size: 0.92em; color: var(--text-dim); line-height: 1.5; }
+.branch .branch-cta { display: inline-block; margin-top: 10px; color: var(--cyan); font-size: 0.85em; font-weight: 600; }
 
-/* About — Architect Profile */
-.architect {
-  display: grid; grid-template-columns: 1fr 2fr; gap: 48px;
-  align-items: start;
+/* Author profile (simple) */
+.author-profile {
+  display: grid; grid-template-columns: 1fr 1.8fr; gap: 36px; align-items: start;
 }
-@media (max-width: 900px) { .architect { grid-template-columns: 1fr; } }
-.architect-portrait {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--r-card);
-  padding: 32px;
-  text-align: center;
+@media (max-width: 900px) { .author-profile { grid-template-columns: 1fr; } }
+.author-portrait {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-card); padding: 28px; text-align: center;
   position: sticky; top: 100px;
 }
-.architect-portrait .avatar {
-  width: 96px; height: 96px; margin: 0 auto 20px;
-  border-radius: 50%;
-  background: var(--grad-1); padding: 3px;
+.author-portrait .avatar {
+  width: 84px; height: 84px; margin: 0 auto 16px;
+  border-radius: 50%; background: var(--grad-1); padding: 3px;
 }
-.architect-portrait .avatar-inner {
+.author-portrait .avatar-inner {
   width: 100%; height: 100%; border-radius: 50%;
-  background: var(--bg);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 2.2em; font-weight: 800; letter-spacing: -0.05em;
   background: var(--bg); color: var(--cyan);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.9em; font-weight: 800; letter-spacing: -0.05em;
 }
-.architect-portrait h3 {
-  font-size: 1.3em; font-weight: 700; margin-bottom: 4px;
-  letter-spacing: -0.01em;
-}
-.architect-portrait .role {
-  font-size: 0.92em; color: var(--text-soft); margin-bottom: 20px;
-}
-.architect-portrait .ids {
-  display: flex; flex-direction: column; gap: 8px;
-  font-size: 0.82em; text-align: left;
-  border-top: 1px solid var(--border); padding-top: 20px;
-}
-.architect-portrait .ids a {
-  color: var(--text-dim); text-decoration: none;
-  display: flex; align-items: center; gap: 8px;
-  padding: 6px 0; border-bottom: 1px dotted var(--border);
-}
-.architect-portrait .ids a:last-child { border-bottom: none; }
-.architect-portrait .ids a:hover { color: var(--cyan); }
-.architect-portrait .ids svg { width: 14px; height: 14px; opacity: 0.6; }
-
-.architect-content h3 {
-  font-size: 1.25em; font-weight: 700; margin-bottom: 14px;
-  letter-spacing: -0.01em; color: var(--gold);
-}
-.architect-content h3:not(:first-child) { margin-top: 32px; }
-.architect-content p {
-  color: var(--text-dim); margin-bottom: 14px; line-height: 1.6;
-}
-.architect-content ul { padding-left: 0; list-style: none; }
-.architect-content li {
-  padding: 8px 0 8px 24px; position: relative;
-  font-size: 0.95em; color: var(--text-dim); line-height: 1.5;
-  border-bottom: 1px dotted var(--border);
-}
-.architect-content li::before {
-  content: ''; position: absolute; left: 0; top: 14px;
-  width: 12px; height: 1px; background: var(--cyan);
-}
-.architect-content li:last-child { border-bottom: none; }
-.architect-content li strong { color: var(--text); }
-
-/* Methodology */
-.method-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-}
-.method-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--r-card);
-  padding: 24px;
-  transition: all var(--t-fast); position: relative;
-}
-.method-card:hover { transform: translateY(-2px); border-color: var(--green); }
-.method-card .method-num {
-  font-size: 0.78em; color: var(--green); font-weight: 700;
-  letter-spacing: 0.12em; margin-bottom: 6px;
-}
-.method-card h4 {
-  font-size: 1.15em; font-weight: 700; margin-bottom: 8px;
-  letter-spacing: -0.01em;
-}
-.method-card p { font-size: 0.9em; color: var(--text-dim); line-height: 1.5; }
-
-/* Anchors row */
-.anchors-row {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px; margin-top: 32px;
-}
-.anchor-pill {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 12px; padding: 16px;
-  text-align: center; transition: all var(--t-fast);
-  text-decoration: none; color: var(--text);
-}
-.anchor-pill:hover { border-color: var(--cyan); background: var(--surface-2); }
-.anchor-pill .ap-label { font-size: 0.74em; color: var(--text-soft); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
-.anchor-pill .ap-value { font-size: 0.92em; font-family: var(--font-mono); color: var(--cyan); }
+.author-portrait h3 { font-size: 1.2em; font-weight: 700; margin-bottom: 4px; }
+.author-portrait .role { font-size: 0.92em; color: var(--text-soft); }
+.author-content h3 { font-size: 1.15em; font-weight: 700; margin-bottom: 12px; color: var(--gold); letter-spacing: -0.01em; }
+.author-content h3:not(:first-child) { margin-top: 28px; }
+.author-content p { color: var(--text-dim); margin-bottom: 12px; line-height: 1.6; }
+.author-content ul { padding-left: 0; list-style: none; }
+.author-content li { padding: 6px 0 6px 22px; position: relative; font-size: 0.95em; color: var(--text-dim); line-height: 1.5; }
+.author-content li::before { content: ''; position: absolute; left: 0; top: 14px; width: 12px; height: 1px; background: var(--cyan); }
+.author-content li strong { color: var(--text); }
 
 /* Final CTA */
 .final-cta {
-  text-align: center; padding: 100px 24px;
+  text-align: center; padding: 80px 24px;
   background: var(--surface);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
   position: relative; overflow: hidden;
 }
 .final-cta::before {
   content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse at center, rgba(0,224,255,0.06), transparent 60%);
+  background: radial-gradient(ellipse at center, rgba(46,224,255,0.07), transparent 60%);
   pointer-events: none;
 }
-.final-cta h2 {
-  font-size: clamp(2em, 4.5vw, 3em);
-  margin-bottom: 24px; max-width: 18ch; margin-left: auto; margin-right: auto;
-}
-.final-cta p {
-  font-size: 1.15em; color: var(--text-dim);
-  max-width: 600px; margin: 0 auto 36px;
-}
-.final-cta .ctas { justify-content: center; }
+.final-cta h2 { font-size: clamp(1.8em, 4vw, 2.6em); margin: 0 auto 18px; max-width: 18ch; }
+.final-cta p { font-size: 1.1em; color: var(--text-dim); max-width: 600px; margin: 0 auto 30px; }
+.final-cta .ctas { justify-content: center; display: flex; gap: 12px; flex-wrap: wrap; }
 
-/* Footer */
+/* Footer (minimal — backend tactic removed) */
 footer {
-  padding: 60px 24px 40px 24px;
-  background: var(--bg-2);
-  border-top: 1px solid var(--border);
+  padding: 50px 24px 30px 24px;
+  background: var(--bg-2); border-top: 1px solid var(--border);
   font-size: 0.88em; color: var(--text-soft);
 }
 footer .footer-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 32px; margin-bottom: 32px;
+  gap: 28px; margin-bottom: 28px;
   max-width: 1200px; margin-left: auto; margin-right: auto;
 }
-footer h5 {
-  font-size: 0.76em; color: var(--text); text-transform: uppercase;
-  letter-spacing: 0.12em; margin-bottom: 14px; font-weight: 700;
-}
-footer a {
-  display: block; color: var(--text-dim); text-decoration: none;
-  padding: 4px 0; transition: color var(--t-fast); font-size: 0.92em;
-}
+footer h5 { font-size: 0.76em; color: var(--text); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 12px; font-weight: 700; }
+footer a { display: block; color: var(--text-dim); text-decoration: none; padding: 4px 0; font-size: 0.9em; transition: color var(--t-fast); }
 footer a:hover { color: var(--cyan); }
-footer .footer-bottom {
-  border-top: 1px solid var(--border); padding-top: 24px;
-  max-width: 1200px; margin: 0 auto;
-  text-align: center; line-height: 1.7;
-}
+footer .footer-bottom { border-top: 1px solid var(--border); padding-top: 22px; max-width: 1200px; margin: 0 auto; text-align: center; line-height: 1.7; font-size: 0.84em; }
 
-/* Reveal animations */
-.reveal {
-  opacity: 0; transform: translateY(20px);
-  transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
-              transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-.reveal.in {
-  opacity: 1; transform: translateY(0);
-}
+/* Reveal */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 700ms cubic-bezier(0.16,1,0.3,1), transform 700ms cubic-bezier(0.16,1,0.3,1); }
+.reveal.in { opacity: 1; transform: translateY(0); }
 
-/* Responsive */
 @media (max-width: 700px) {
-  nav.top .links a { display: none; }
-  nav.top .links a.cta-mini { display: inline-flex; }
+  nav.top .links a { font-size: 0.85em; padding: 6px 10px; }
   .hero { padding: 110px 20px 40px 20px; min-height: 80vh; }
-  .stats-strip { margin-top: 50px; }
-  section { padding: 70px 20px; }
+  section { padding: 60px 20px; }
+  .viewer-canvas { min-height: 420px; }
+  .view-mode { height: 420px; }
 }
 </style>
 </head>
@@ -625,231 +422,325 @@ footer .footer-bottom {
       <span class="logo-text">AUGMANITAI</span>
     </a>
     <div class="links">
+      <a class="link" href="#understand">What is this?</a>
+      <a class="link" href="#universe">Universe</a>
       <a class="link" href="#corpora">Corpora</a>
-      <a class="link" href="#programme">Programme</a>
-      <a class="link" href="#methodology">Methodology</a>
+      <a class="link" href="#branches">Branches</a>
       <a class="link" href="#author">Author</a>
-      <a class="link" href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/atlas/">Atlas</a>
     </div>
   </div>
 </nav>
 
 <main id="main" role="main">
 
+<!-- HERO -->
 <section class="hero">
   <div class="container">
     <span class="badge"><span class="pulse"></span>Research Programme · Living Document · 2026</span>
-    <h1>The Phenomenology of <span class="accent">Human-AI&nbsp;Interaction</span></h1>
-    <p class="lead">A research programme by Andreas Ehstand. <strong>32,596 defined terms</strong> across <strong>165 research-domain clusters</strong>, <strong>9 sister corpora</strong>, ISO 704/1087/30042-inspired terminology engineering — the descriptive grammar of how humans and AI systems meet, work, learn, and shape each other.</p>
+    <h1>A field guide to <span class="accent">people working with AI</span></h1>
+    <p class="lead">When humans and AI systems meet, work, learn, and shape each other, recurring patterns appear. This research programme by Andreas Ehstand names and describes those patterns. Nothing prescribed, nothing sold — just a careful, bilingual inventory of what is observed.</p>
     <div class="ctas">
-      <a class="btn primary" href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/">
-        Enter the Compendium
+      <a class="btn primary" href="#universe">
+        Show me the universe
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
-      <a class="btn ghost" href="#corpora">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-        Browse 9 Corpora
+      <a class="btn ghost" href="#understand">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg>
+        Start here if it's new
       </a>
-      <a class="btn ghost" href="https://doi.org/10.5281/zenodo.20118267" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c2.39 0 4.68.95 6.36 2.64"/><path d="M21 3v6h-6"/></svg>
-        Concept DOI
-      </a>
-    </div>
-
-    <div class="stats-strip" aria-label="Programme statistics">
-      <div class="stat-cell"><span class="num" data-target="32596">0</span><span class="lbl">Defined Terms</span></div>
-      <div class="stat-cell"><span class="num" data-target="165">0</span><span class="lbl">Domain Clusters</span></div>
-      <div class="stat-cell"><span class="num" data-target="9">0</span><span class="lbl">Sister Corpora</span></div>
-      <div class="stat-cell"><span class="num" data-target="6">0</span><span class="lbl">Programme Branches</span></div>
-      <div class="stat-cell"><span class="num" data-target="173" data-suffix="k">0</span><span class="lbl">Cross-References</span></div>
-      <div class="stat-cell"><span class="num" data-target="29">0</span><span class="lbl">Disclaimer Paragraphs</span></div>
     </div>
   </div>
 </section>
 
+<!-- WHAT IS THIS -->
+<section id="understand">
+  <div class="container reveal">
+    <span class="eyebrow">In plain words</span>
+    <h2>What is <span class="accent">this</span>, really?</h2>
+    <p class="intro">Three short answers. Skip to whichever fits how you read.</p>
+
+    <div class="simple-explain">
+      <div class="explain-card">
+        <h3><span class="em">In one sentence</span></h3>
+        <p>It is a research library of <strong>32,596 named patterns</strong> that show up when a human and an AI system interact — in classrooms, in workplaces, in robotics labs, in everyday use.</p>
+      </div>
+      <div class="explain-card">
+        <h3><span class="em">In three sentences</span></h3>
+        <p>Every page is one named pattern, described in plain English and German, written from observation rather than prescription. The patterns are sorted into 165 topical clusters and six thematic branches. You can browse the universe five different ways below — pick the one that matches how your mind likes maps.</p>
+      </div>
+      <div class="explain-card">
+        <h3><span class="em">What it is <u>not</u></span></h3>
+        <ul>
+          <li>It is <strong>not</strong> medical, legal, therapeutic or financial advice.</li>
+          <li>It is <strong>not</strong> a commercial product or service.</li>
+          <li>It is <strong>not</strong> a recommendation about what you should do.</li>
+          <li>It is descriptive research, freely citable, attribution-required, non-commercial.</li>
+        </ul>
+      </div>
+      <div class="explain-card">
+        <h3><span class="em">Who is it for</span></h3>
+        <ul>
+          <li>Researchers who need a vocabulary for human-AI phenomena.</li>
+          <li>Educators looking for shared language to talk about AI in class.</li>
+          <li>Engineers and product designers who need precise terms for what users actually do.</li>
+          <li>Anyone curious how a working coach started naming what they saw.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UNIVERSE VIEWER -->
+<section id="universe">
+  <div class="container reveal">
+    <span class="eyebrow">Five ways to look at it</span>
+    <h2>The <span class="accent">Universe</span> — explore by feel</h2>
+    <p class="intro">Same nine corpora, five different visual maps. Click a node in any view to open the corresponding corpus. Try several — every map shows a different aspect.</p>
+
+    <div class="viewer">
+      <div class="viewer-tabs" role="tablist">
+        <button class="viewer-tab active" data-view="network" role="tab" aria-selected="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="13" r="2"/><circle cx="5" cy="20" r="2"/><circle cx="19" cy="20" r="2"/><path d="M5 8v10M19 8v10M7 6h10M7 20h10M6.5 7l4.5 5M17.5 7l-4.5 5M6.5 19l4.5-6M17.5 19l-4.5-6"/></svg>
+          Network
+        </button>
+        <button class="viewer-tab" data-view="solar" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg>
+          Solar System
+        </button>
+        <button class="viewer-tab" data-view="periodic" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="5" height="5"/><rect x="10" y="3" width="5" height="5"/><rect x="17" y="3" width="5" height="5"/><rect x="3" y="10" width="5" height="5"/><rect x="10" y="10" width="5" height="5"/><rect x="3" y="17" width="5" height="5"/><rect x="10" y="17" width="5" height="5"/><rect x="17" y="17" width="5" height="5"/></svg>
+          Grid
+        </button>
+        <button class="viewer-tab" data-view="tree" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="3" r="1.5"/><circle cx="6" cy="12" r="1.5"/><circle cx="18" cy="12" r="1.5"/><circle cx="3" cy="21" r="1.5"/><circle cx="9" cy="21" r="1.5"/><circle cx="15" cy="21" r="1.5"/><circle cx="21" cy="21" r="1.5"/><path d="M12 5v5l-6 1M12 10l6 1M6 14v5l-3 1M6 14l3 6M18 14v5l-3 1M18 14l3 6"/></svg>
+          Tree
+        </button>
+        <button class="viewer-tab" data-view="bubble" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5"/><circle cx="17" cy="16" r="3"/><circle cx="6" cy="18" r="2"/></svg>
+          Bubble
+        </button>
+      </div>
+
+      <div class="viewer-canvas">
+        <!-- 1. NETWORK VIEW -->
+        <div class="view-mode active" id="view-network" role="tabpanel">
+          <svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" aria-label="Network view of corpora">
+            <defs>
+              <radialGradient id="nodeGrad-center" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#2ee0ff" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#8a5dff" stop-opacity="0.6"/>
+              </radialGradient>
+              <radialGradient id="nodeGrad-peri" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#54ec96" stop-opacity="0.85"/>
+                <stop offset="100%" stop-color="#2ee0ff" stop-opacity="0.45"/>
+              </radialGradient>
+              <radialGradient id="nodeGrad-warm" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ffcc6a" stop-opacity="0.85"/>
+                <stop offset="100%" stop-color="#ff5fa0" stop-opacity="0.45"/>
+              </radialGradient>
+              <linearGradient id="edgeGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#2ee0ff" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#8a5dff" stop-opacity="0.4"/>
+              </linearGradient>
+            </defs>
+            <g id="net-edges"></g>
+            <g id="net-nodes"></g>
+          </svg>
+        </div>
+
+        <!-- 2. SOLAR SYSTEM VIEW -->
+        <div class="view-mode" id="view-solar" role="tabpanel">
+          <svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" aria-label="Solar system view">
+            <defs>
+              <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#fff" stop-opacity="0.9"/>
+                <stop offset="40%" stop-color="#2ee0ff" stop-opacity="0.7"/>
+                <stop offset="100%" stop-color="#8a5dff" stop-opacity="0.3"/>
+              </radialGradient>
+            </defs>
+            <g id="solar-orbits"></g>
+            <g id="solar-planets"></g>
+          </svg>
+        </div>
+
+        <!-- 3. GRID VIEW -->
+        <div class="view-mode" id="view-periodic" role="tabpanel">
+          <svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" aria-label="Grid view">
+            <g id="grid-cells"></g>
+          </svg>
+        </div>
+
+        <!-- 4. TREE VIEW -->
+        <div class="view-mode" id="view-tree" role="tabpanel">
+          <svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" aria-label="Tree view">
+            <g id="tree-edges"></g>
+            <g id="tree-nodes"></g>
+          </svg>
+        </div>
+
+        <!-- 5. BUBBLE VIEW -->
+        <div class="view-mode" id="view-bubble" role="tabpanel">
+          <svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" aria-label="Bubble view">
+            <g id="bubble-bubbles"></g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="view-caption" id="viewCaption">
+        <strong>Network view:</strong> Each circle is one of the nine corpora; lines show how they cross-reference each other. The biggest node in the middle is the Master Compendium — everything else orbits around it.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORPORA CARDS -->
 <section id="corpora">
   <div class="container reveal">
-    <span class="section-eyebrow">9 Public Corpora</span>
-    <h2>The <span class="accent">Constellation</span></h2>
-    <p class="intro">Nine independently-citable, cross-linked corpora form the public layer of the programme. Each is reachable on its own GitHub-Pages address, JSON-LD-machine-readable, ISO-aligned, and licensed CC&nbsp;BY-NC-ND&nbsp;4.0. The Master Compendium is anchored at the centre; the others orbit it as thematic branches and methodological tools.</p>
+    <span class="eyebrow">Nine corpora</span>
+    <h2>What you can <span class="accent">open</span></h2>
+    <p class="intro">Nine independent collections you can read or download. Each opens in its own page.</p>
 
     <div class="corpora-grid">
-      <!-- Featured: Master Compendium -->
       <a class="corpus-card featured" href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/">
         <span class="corpus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M5.6 18.4 18.4 5.6"/></svg></span>
-        <h3>AUGMANITAI Compendium</h3>
-        <span class="corpus-tag">Master · 32,596 defined terms · 165 clusters · EN+DE</span>
-        <p>The canonical phenomenology atlas. Per-term HTML pages with inline Schema.org DefinedTerm, SKOS Concept, PROV Entity. Bulk exports (JSONL, JSON-LD graph, domain index). Methodological backbone of the entire programme.</p>
-        <span class="corpus-cta">Enter Master Atlas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <h3>Master Compendium</h3>
+        <span class="corpus-sub">32,596 defined terms · bilingual EN+DE</span>
+        <p>The main library. One page per named pattern, each with a description, related terms, and disclaimer. Browse alphabetically or by topic.</p>
+        <span class="corpus-cta">Open the main library <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
 
-      <a class="corpus-card wide" href="https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/">
+      <a class="corpus-card half" href="https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/">
         <span class="corpus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M6 9v6l6 3M18 9v6l-6 3"/></svg></span>
-        <h3>NEOMANITAI Terms</h3>
-        <span class="corpus-tag">Companion atlas · ~4,400 academic pages · OWL/RDF/TTL/JSONL</span>
-        <p>ISO-704-inspired academic term pages with full OWL ontology, SKOS/Turtle/RDF/JSONL exports. Distinct from the Master atlas — separate generator, separate citation chain.</p>
+        <h3>Companion atlas</h3>
+        <span class="corpus-sub">~4,400 academic pages</span>
+        <p>A second collection of term pages in a more academic format, with extra machine-readable export files.</p>
         <span class="corpus-cta">Open companion <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
 
-      <a class="corpus-card third" href="https://andreasehstandlicenseofclarityloc.github.io/permanitai-framework/">
+      <a class="corpus-card half" href="https://andreasehstandlicenseofclarityloc.github.io/permanitai-framework/">
         <span class="corpus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
-        <h3>PERMANITAI</h3>
-        <span class="corpus-tag">PFT-MKI V3.0</span>
-        <p>Substrate-Independent Performance Factor framework. 30 performance factors × 6 substrate types.</p>
+        <h3>Performance framework</h3>
+        <span class="corpus-sub">30 performance factors · interactive</span>
+        <p>An interactive map of performance factors that apply equally to people, AI agents, robots and teams of any mix.</p>
         <span class="corpus-cta">Open framework <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
 
       <a class="corpus-card half" href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-periodic-table/">
         <span class="corpus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="6"/><rect x="15" y="3" width="6" height="6"/><rect x="3" y="15" width="6" height="6"/><rect x="15" y="15" width="6" height="6"/><rect x="9" y="9" width="6" height="6"/></svg></span>
-        <h3>Periodic Table</h3>
-        <span class="corpus-tag">Interactive · 100 element-style terms · bilingual EN/DE</span>
-        <p>The hundred most representative human-AI interaction terms, presented as a Mendeleev-style periodic table. Hover for definitions; tap for full disclaimer.</p>
-        <span class="corpus-cta">Open periodic visualization <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <h3>Periodic table</h3>
+        <span class="corpus-sub">100 selected terms · Mendeleev-style</span>
+        <p>A hundred of the most representative patterns, arranged like a periodic table. Hover for definitions.</p>
+        <span class="corpus-cta">Open periodic table <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
 
       <a class="corpus-card half" href="https://andreasehstandlicenseofclarityloc.github.io/synmanitai/">
         <span class="corpus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5l8 8 8-8v14"/></svg></span>
-        <h3>Synmanitai</h3>
-        <span class="corpus-tag">Cultural form · founding article (DE)</span>
-        <p>A cultural form for collaborative thinking between humans and language models. Methodological manifesto: transparency, model-independence, no author-erasure.</p>
-        <span class="corpus-cta">Read founding article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <h3>Founding essay</h3>
+        <span class="corpus-sub">Manifesto on collaborative writing</span>
+        <p>A short founding essay (in German) on collaborative thinking between humans and language models — the methodological grammar behind the whole library.</p>
+        <span class="corpus-cta">Read essay <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
 
       <a class="corpus-card third" href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-atlas/">
         <span class="corpus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 0-10-10"/><path d="M12 2v20M2 12h20"/></svg></span>
-        <h3>Sister Atlas</h3>
-        <span class="corpus-tag">Companion landing</span>
-        <p>Lightweight cross-link to the Master Compendium.</p>
+        <h3>Sister atlas</h3>
+        <span class="corpus-sub">Companion landing</span>
+        <p>A lighter sister entry point that mirrors the main library structure.</p>
         <span class="corpus-cta">Open sister <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
 
       <a class="corpus-card third" href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-wow/">
         <span class="corpus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 22 8.5 12 15 2 8.5z"/><path d="m22 17.5-10 6.5-10-6.5"/></svg></span>
-        <h3>WOW Companion</h3>
-        <span class="corpus-tag">Vocabulary lens</span>
-        <p>Knowledge-graph perspective on the core 100 interaction terms.</p>
-        <span class="corpus-cta">Open lens <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <h3>Knowledge-graph view</h3>
+        <span class="corpus-sub">100 core terms · graph perspective</span>
+        <p>A knowledge-graph view of the core 100 patterns.</p>
+        <span class="corpus-cta">Open graph view <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
 
       <a class="corpus-card third" href="https://andreasehstandlicenseofclarityloc.github.io/andreas-ehstand-entity/">
         <span class="corpus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 22c0-4 4-7 8-7s8 3 8 7"/></svg></span>
-        <h3>Author Entity</h3>
-        <span class="corpus-tag">Schema.org Person JSON-LD</span>
-        <p>Canonical machine-readable author identity. Linked from each term page via creator-block.</p>
-        <span class="corpus-cta">Open entity <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <h3>About the author</h3>
+        <span class="corpus-sub">Background &amp; affiliations</span>
+        <p>Andreas Ehstand's research background and academic anchors.</p>
+        <span class="corpus-cta">Open author page <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
     </div>
   </div>
 </section>
 
-<section id="programme">
+<!-- SIX BRANCHES -->
+<section id="branches">
   <div class="container reveal">
-    <span class="section-eyebrow">Six Branches</span>
-    <h2>The Programme <span class="accent">Architecture</span></h2>
-    <p class="intro">Six thematic branches of phenomenological inquiry, each grounded in a distinct empirical or methodological tradition. The branches are conceptual layers — they share authorship and methodology, and they cross-cite each other systematically.</p>
+    <span class="eyebrow">Six themes</span>
+    <h2>The <span class="accent">branches</span> of the work</h2>
+    <p class="intro">Six thematic lenses that organise the library. Click any to open the topic page in the main library.</p>
 
     <div class="branches">
-      <div class="branch">
-        <h4>AUGMANITAI</h4>
-        <div class="branch-tag">Terminology Layer</div>
-        <p>Phenomenology of human-AI interaction. The descriptive baseline. 32,596 defined terms across 165 clusters.</p>
-      </div>
-      <div class="branch">
-        <h4>NEOMANITAI</h4>
-        <div class="branch-tag">Knowledge-Graph Layer</div>
-        <p>Cross-reference and ontological-relation layer. OWL/RDF/SKOS exports for semantic-web pipelines.</p>
-      </div>
-      <div class="branch">
-        <h4>PERMANITAI</h4>
-        <div class="branch-tag">Substrate-Independent Performance</div>
-        <p>Cross-domain transfer of high-performance sport-science methodology. PFT-MKI: 30 factors × 6 substrates.</p>
-      </div>
-      <div class="branch">
-        <h4>ROBMANITAI</h4>
-        <div class="branch-tag">Robotics Phenomenology</div>
-        <p>Multi-robot coordination, human-robot team dynamics, multi-agent / agent-team orchestration phenomenology.</p>
-      </div>
-      <div class="branch">
-        <h4>EDUMANITAI</h4>
-        <div class="branch-tag">Education Phenomenology</div>
-        <p>Phenomenology of learning and pedagogy mediated by AI systems. Cross-generational, cross-cultural.</p>
-      </div>
-      <div class="branch">
-        <h4>JOBMANITAI</h4>
-        <div class="branch-tag">Work Phenomenology</div>
-        <p>Phenomenology of work patterns shaped by AI integration.</p>
-      </div>
+      <a class="branch" href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/domains/augmanitai-core/">
+        <h4>Core library</h4>
+        <div class="branch-sub">The baseline vocabulary</div>
+        <p>The descriptive baseline — the broadest collection of human-AI interaction patterns.</p>
+        <span class="branch-cta">Open topic →</span>
+      </a>
+      <a class="branch" href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/domains/neomanitai-knowledge-graph/">
+        <h4>Cross-references</h4>
+        <div class="branch-sub">How patterns connect</div>
+        <p>The relationship layer — how patterns link to and depend on each other.</p>
+        <span class="branch-cta">Open topic →</span>
+      </a>
+      <a class="branch" href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/domains/permanitai/">
+        <h4>Performance patterns</h4>
+        <div class="branch-sub">From sport to systems</div>
+        <p>How performance factors from elite sport translate to humans, AI agents, robots and mixed teams.</p>
+        <span class="branch-cta">Open topic →</span>
+      </a>
+      <a class="branch" href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/domains/robmanitai/">
+        <h4>Robotics &amp; teams</h4>
+        <div class="branch-sub">Multi-agent dynamics</div>
+        <p>Multi-robot coordination, human-robot team dynamics, multi-agent orchestration patterns.</p>
+        <span class="branch-cta">Open topic →</span>
+      </a>
+      <a class="branch" href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/domains/edumanitai/">
+        <h4>Learning &amp; teaching</h4>
+        <div class="branch-sub">AI-mediated education</div>
+        <p>Phenomena that show up when students and teachers work with AI tools.</p>
+        <span class="branch-cta">Open topic →</span>
+      </a>
+      <a class="branch" href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/domains/jobmanitai/">
+        <h4>Work patterns</h4>
+        <div class="branch-sub">AI in the workplace</div>
+        <p>How everyday work — meetings, writing, planning, decision-making — shifts when AI is in the loop.</p>
+        <span class="branch-cta">Open topic →</span>
+      </a>
     </div>
   </div>
 </section>
 
-<section id="methodology">
-  <div class="container reveal">
-    <span class="section-eyebrow">Methodological Frame</span>
-    <h2>Holistic Performance <span class="accent">Analysis</span></h2>
-    <p class="intro">A cross-domain transfer of high-performance sport-science methodology (25-year Bundesliga tennis coaching lineage) to human-AI interaction analysis. Every observation passes four structural pillars; every term is built on this skeleton.</p>
-
-    <div class="method-grid">
-      <div class="method-card">
-        <div class="method-num">01 / OBSERVABLE</div>
-        <h4>Detectable in Practice</h4>
-        <p>Each phenomenon must be detectable in real human-AI interaction. No purely speculative entities.</p>
-      </div>
-      <div class="method-card">
-        <div class="method-num">02 / DECOMPOSABLE</div>
-        <h4>Broken into Sub-Phenomena</h4>
-        <p>Complex patterns broken into smaller, distinct, named sub-phenomena. Compositional hierarchy.</p>
-      </div>
-      <div class="method-card">
-        <div class="method-num">03 / MEASURABLE</div>
-        <h4>Operational Quantification</h4>
-        <p>Operational definitions allow quantification, even where the phenomenon is subjective in nature.</p>
-      </div>
-      <div class="method-card">
-        <div class="method-num">04 / CONTROLLABLE</div>
-        <h4>Intentional Intervention</h4>
-        <p>Measured phenomena enter the space of intentional intervention — descriptive, not prescriptive.</p>
-      </div>
-    </div>
-
-    <p style="margin-top: 36px; color: var(--text-dim); font-size: 0.96em;">
-      Plus: <strong>Multi-LLM Triadic Audit Framework</strong> · <strong>Cross-LLM Convergence Methodology</strong> · <strong>N=1 Extreme Observation Methodology</strong> · <strong>Compression Axiom</strong> · <strong>Living-Document Discipline</strong> · ISO 704/1087/30042-inspired terminology engineering.
-    </p>
-  </div>
-</section>
-
+<!-- AUTHOR -->
 <section id="author">
   <div class="container reveal">
-    <span class="section-eyebrow">Author</span>
+    <span class="eyebrow">Author</span>
     <h2>Andreas <span class="accent">Ehstand</span></h2>
-    <p class="intro">AI researcher in applied terminology science and phenomenology of human-AI interaction. Cross-domain methodological background spanning 25 years of high-performance sport science, university teaching, and now full-time research.</p>
+    <p class="intro">An AI researcher in applied terminology science. Background: 25 years of high-performance sport coaching, university teaching, then full-time research on the language of human-AI interaction.</p>
 
-    <div class="architect">
-      <aside class="architect-portrait">
+    <div class="author-profile">
+      <aside class="author-portrait">
         <div class="avatar"><div class="avatar-inner">AE</div></div>
         <h3>Andreas Ehstand, M.Ed.</h3>
         <div class="role">AI Researcher · Starnberg, Germany</div>
-        <div class="ids">
-          <a href="https://orcid.org/0009-0006-3773-7796" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M9 12h6"/></svg> ORCID 0009-0006-3773-7796</a>
-          <a href="https://www.wikidata.org/wiki/Q138634675" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M12 3v18"/></svg> Wikidata Q138634675 (Person)</a>
-          <a href="https://www.wikidata.org/wiki/Q138522830" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> Wikidata Q138522830 (Programme)</a>
-          <a href="https://scholar.google.com/citations?user=KOarq7AAAAAJ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg> Google Scholar</a>
-          <a href="https://github.com/AndreasEhstandLicenseofClarityLOC" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3M15 22v-4a3 3 0 0 0-1-2.4c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5a10.6 10.6 0 0 0-5.5 0C6.5 2 5.5 2 5.5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4.5 9c0 3.5 3 5.5 6 5.5A3 3 0 0 0 9 17v5"/></svg> GitHub</a>
-          <a href="https://huggingface.co/AndreasEhstand" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/><path d="M8 14c1 1 2 2 4 2s3-1 4-2"/></svg> Hugging Face</a>
-        </div>
       </aside>
 
-      <div class="architect-content">
-        <h3>Academic Anchors</h3>
+      <div class="author-content">
+        <h3>Academic anchors</h3>
         <ul>
           <li><strong>TU Dortmund</strong> — Lehrstuhl für Allgemeine Pädagogik (Prof. Dr. Sabine Hornberg)</li>
           <li><strong>University of Bayreuth</strong> — Sport Science + Hochschuldidaktik</li>
           <li><strong>FBZHL Bayern</strong> — Zertifikat Hochschullehre (youngest holder)</li>
-          <li><strong>Toni Nadal Excellence Certificate</strong></li>
+          <li>Toni Nadal Excellence Certificate</li>
           <li>GPTCA / ISMCA / BTV B-Trainer Leistungssport certifications</li>
         </ul>
 
-        <h3>Cross-Domain Lineage</h3>
+        <h3>Cross-domain background</h3>
         <ul>
           <li>25 years professional sport coaching</li>
           <li>Bundesliga tennis coach (multiple years)</li>
@@ -858,72 +749,30 @@ footer .footer-bottom {
           <li>Co-author of <em>Faszination Padel</em> (2024)</li>
         </ul>
 
-        <h3>Originator of</h3>
+        <h3>What this programme contributes</h3>
         <ul>
-          <li>The <strong>Compression Axiom</strong> (terminology-information-equivalence)</li>
-          <li><strong>N=1 Extreme Observation Methodology</strong></li>
-          <li><strong>Multi-LLM Triadic Audit Framework</strong></li>
-          <li><strong>Holistic Performance Analysis Methodology</strong> (Observable / Decomposable / Measurable / Controllable)</li>
-          <li>Cross-domain sport-science → human-AI methodological transfer</li>
-        </ul>
-
-        <h3>Trademark &amp; Prior Art</h3>
-        <ul>
-          <li><strong>License of Clarity</strong> — registered EU Trademark <a href="https://euipo.europa.eu/eSearch/#details/trademarks/019206780" target="_blank" rel="noopener">EUIPO 019206780</a></li>
-          <li><strong>Concept-DOI</strong> <a href="https://doi.org/10.5281/zenodo.20118267" target="_blank" rel="noopener">10.5281/zenodo.20118267</a> — research-programme anchor</li>
-          <li>Bitcoin-block prior-art anchoring (manifest-rooted, multi-hash, OTS-stamped)</li>
+          <li>A working language for what happens when people work with AI</li>
+          <li>A bridge between sport-science performance methodology and AI evaluation</li>
+          <li>A method for naming patterns from first-person observation rather than retrofitted theory</li>
+          <li>A framework that treats humans, AI, robots and mixed teams as substrates that can be observed by the same set of questions</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="container reveal">
-    <span class="section-eyebrow">Persistent Identifiers</span>
-    <h2>Prior-Art <span class="accent">Anchors</span></h2>
-    <p class="intro">Every corpus is anchored in a triple of independent persistent-identifier systems: DataCite/Zenodo DOI registry, ORCID/Wikidata identity graph, and Bitcoin-block cryptographic hash-stamping. Citation-stable, machine-verifiable, jurisdiction-resilient.</p>
-
-    <div class="anchors-row">
-      <a class="anchor-pill" href="https://doi.org/10.5281/zenodo.20118267" target="_blank" rel="noopener">
-        <div class="ap-label">Concept DOI</div>
-        <div class="ap-value">10.5281/zenodo.20118267</div>
-      </a>
-      <a class="anchor-pill" href="https://orcid.org/0009-0006-3773-7796" target="_blank" rel="noopener">
-        <div class="ap-label">Author ORCID</div>
-        <div class="ap-value">0009-0006-3773-7796</div>
-      </a>
-      <a class="anchor-pill" href="https://www.wikidata.org/wiki/Q138634675" target="_blank" rel="noopener">
-        <div class="ap-label">Wikidata Person</div>
-        <div class="ap-value">Q138634675</div>
-      </a>
-      <a class="anchor-pill" href="https://www.wikidata.org/wiki/Q138522830" target="_blank" rel="noopener">
-        <div class="ap-label">Wikidata Programme</div>
-        <div class="ap-value">Q138522830</div>
-      </a>
-      <a class="anchor-pill" href="https://euipo.europa.eu/eSearch/#details/trademarks/019206780" target="_blank" rel="noopener">
-        <div class="ap-label">EU Trademark</div>
-        <div class="ap-value">EUIPO 019206780</div>
-      </a>
-      <a class="anchor-pill" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">
-        <div class="ap-label">License</div>
-        <div class="ap-value">CC BY-NC-ND 4.0</div>
-      </a>
-    </div>
-  </div>
-</section>
-
+<!-- FINAL CTA -->
 <div class="final-cta">
   <div class="container">
-    <h2 class="reveal">Start with the <span class="accent">Master Atlas</span>.</h2>
-    <p class="reveal">32,596 phenomenology-of-human-AI-interaction terms, bilingual, ISO-aligned, cross-referenced, machine-readable, citation-stable.</p>
+    <h2 class="reveal">Start with the <span class="accent">main library</span>.</h2>
+    <p class="reveal">If you only open one thing, open this. Browse by topic, by letter, or use the search.</p>
     <div class="ctas reveal">
       <a class="btn primary" href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/">
-        Enter the Compendium
+        Open the main library
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
       <a class="btn ghost" href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/atlas/">
-        Browse 32,596 Terms
+        Browse the full atlas
       </a>
     </div>
   </div>
@@ -931,62 +780,53 @@ footer .footer-bottom {
 
 </main>
 
+<!-- FOOTER (clean, no backend tactic visible) -->
 <footer role="contentinfo">
   <div class="footer-grid">
     <div>
-      <h5>Corpora</h5>
-      <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/">Master Compendium</a>
-      <a href="https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/">NEOMANITAI Terms</a>
-      <a href="https://andreasehstandlicenseofclarityloc.github.io/permanitai-framework/">PERMANITAI Framework</a>
-      <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-periodic-table/">Periodic Table</a>
-      <a href="https://andreasehstandlicenseofclarityloc.github.io/synmanitai/">Synmanitai</a>
-      <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-atlas/">Sister Atlas</a>
-      <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-wow/">WOW Companion</a>
-      <a href="https://andreasehstandlicenseofclarityloc.github.io/andreas-ehstand-entity/">Author Entity</a>
+      <h5>Read</h5>
+      <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/">Main library</a>
+      <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/atlas/">Alphabetic atlas</a>
+      <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/domains/">Browse topics</a>
+      <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-periodic-table/">Periodic table</a>
     </div>
     <div>
-      <h5>Identity</h5>
-      <a href="https://orcid.org/0009-0006-3773-7796" target="_blank" rel="noopener">ORCID</a>
-      <a href="https://www.wikidata.org/wiki/Q138634675" target="_blank" rel="noopener">Wikidata Person</a>
-      <a href="https://www.wikidata.org/wiki/Q138522830" target="_blank" rel="noopener">Wikidata Programme</a>
-      <a href="https://scholar.google.com/citations?user=KOarq7AAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-      <a href="https://github.com/AndreasEhstandLicenseofClarityLOC" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://huggingface.co/AndreasEhstand" target="_blank" rel="noopener">Hugging Face</a>
+      <h5>Companion corpora</h5>
+      <a href="https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/">Academic atlas</a>
+      <a href="https://andreasehstandlicenseofclarityloc.github.io/permanitai-framework/">Performance framework</a>
+      <a href="https://andreasehstandlicenseofclarityloc.github.io/synmanitai/">Founding essay</a>
+      <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-wow/">Knowledge-graph view</a>
     </div>
     <div>
-      <h5>Legal &amp; Governance</h5>
-      <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/disclaimer/">Disclaimer §1–§29</a>
+      <h5>Author</h5>
+      <a href="https://andreasehstandlicenseofclarityloc.github.io/andreas-ehstand-entity/">About the author</a>
+      <a href="#understand">What is this?</a>
+      <a href="#universe">Universe overview</a>
+    </div>
+    <div>
+      <h5>Legal</h5>
       <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/impressum/">Impressum</a>
       <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/datenschutz/">Datenschutz</a>
-      <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/ai-transparency/">AI Transparency (Art. 50)</a>
-      <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/trade-secret-layer/">Trade-Secret Layer (Recital 173)</a>
-      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a>
-    </div>
-    <div>
-      <h5>Anchors</h5>
-      <a href="https://doi.org/10.5281/zenodo.20118267" target="_blank" rel="noopener">Concept DOI</a>
-      <a href="https://euipo.europa.eu/eSearch/#details/trademarks/019206780" target="_blank" rel="noopener">EU Trademark</a>
-      <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/exports/">Bulk Exports</a>
-      <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/llms.txt">llms.txt</a>
-      <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/sitemap.xml">Sitemap</a>
+      <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/disclaimer/">Disclaimer</a>
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">License (CC BY-NC-ND 4.0)</a>
     </div>
   </div>
   <div class="footer-bottom">
     <strong>AUGMANITAI Research Programme</strong> · Andreas Ehstand · AI Researcher · Starnberg, Germany<br>
-    Verantwortlich §5 DDG / §18 Abs. 2 MStV: Andreas Ehstand, Nepomukweg 7, 82319 Starnberg, Deutschland<br>
-    Built 2026-05-15 · Living Document · CC BY-NC-ND 4.0
+    Verantwortlich §5 DDG / §18 Abs. 2 MStV: Andreas Ehstand, Nepomukweg 7, 82319 Starnberg<br>
+    Living document · CC BY-NC-ND 4.0
   </div>
 </footer>
 
 <script>
-// Spotlight follows mouse
+// === Mouse spotlight ===
 (function(){
   const sp = document.getElementById('spotlight');
   if (!sp || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   let rafId;
-  document.addEventListener('mousemove', function(e){
+  document.addEventListener('mousemove', e => {
     if (rafId) return;
-    rafId = requestAnimationFrame(function(){
+    rafId = requestAnimationFrame(() => {
       sp.style.setProperty('--mx', e.clientX + 'px');
       sp.style.setProperty('--my', e.clientY + 'px');
       rafId = 0;
@@ -994,7 +834,7 @@ footer .footer-bottom {
   });
 })();
 
-// Reveal-on-scroll
+// === Reveal-on-scroll ===
 (function(){
   if (!('IntersectionObserver' in window)) {
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
@@ -1002,44 +842,330 @@ footer .footer-bottom {
   }
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('in');
-        obs.unobserve(e.target);
-      }
+      if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
     });
   }, { threshold: 0.15 });
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 })();
 
-// Number counters
+// === Universe data: 9 corpora ===
+const CORPORA = [
+  { id: 'main',    name: 'Main library',         short: 'Main',         url: 'https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/',          size: 32596, kind: 'master', col: '#2ee0ff' },
+  { id: 'neo',     name: 'Companion atlas',      short: 'Companion',    url: 'https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/',           size: 4400,  kind: 'companion', col: '#8a5dff' },
+  { id: 'perf',    name: 'Performance framework',short: 'Performance',  url: 'https://andreasehstandlicenseofclarityloc.github.io/permanitai-framework/',       size: 30,    kind: 'framework', col: '#54ec96' },
+  { id: 'peri',    name: 'Periodic table',       short: 'Periodic',     url: 'https://andreasehstandlicenseofclarityloc.github.io/augmanitai-periodic-table/',  size: 100,   kind: 'tool', col: '#ffcc6a' },
+  { id: 'syn',     name: 'Founding essay',       short: 'Essay',        url: 'https://andreasehstandlicenseofclarityloc.github.io/synmanitai/',                  size: 1,     kind: 'essay', col: '#ff5fa0' },
+  { id: 'sister',  name: 'Sister atlas',         short: 'Sister',       url: 'https://andreasehstandlicenseofclarityloc.github.io/augmanitai-atlas/',           size: 1,     kind: 'mirror', col: '#2ee0ff' },
+  { id: 'wow',     name: 'Knowledge-graph view', short: 'KG view',      url: 'https://andreasehstandlicenseofclarityloc.github.io/augmanitai-wow/',             size: 100,   kind: 'mirror', col: '#8a5dff' },
+  { id: 'author',  name: 'About the author',     short: 'Author',       url: 'https://andreasehstandlicenseofclarityloc.github.io/andreas-ehstand-entity/',     size: 1,     kind: 'about', col: '#ffcc6a' },
+  { id: 'portal',  name: 'This portal',          short: 'Portal',       url: '/',                                                                                size: 1,     kind: 'portal', col: '#54ec96' }
+];
+
+const CAPTIONS = {
+  network:  '<strong>Network:</strong> Each circle is one of the nine corpora; lines show how they cross-reference. The biggest node in the middle is the Main Library — everything else orbits around it. Click any circle to open that corpus.',
+  solar:    '<strong>Solar System:</strong> Main Library is the sun in the centre; the other corpora are planets in orbit. The bigger the planet, the more pages inside. Click any planet.',
+  periodic: '<strong>Grid:</strong> Each cell is one corpus. Compact reference layout if you prefer a table over a constellation. Click any cell.',
+  tree:     '<strong>Tree:</strong> The same nine corpora grouped into three families — the central library, its mirrors, and its specialist tools. Click any leaf.',
+  bubble:   '<strong>Bubble pack:</strong> Bubble size = number of pages inside that corpus. The Main Library is by far the largest. Click any bubble.'
+};
+
+// === Render Network View ===
 (function(){
-  const nums = document.querySelectorAll('.num[data-target]');
-  function animate(el){
-    const target = parseInt(el.dataset.target, 10);
-    const suffix = el.dataset.suffix || '';
-    const dur = 1400, start = performance.now();
-    function tick(now){
-      const t = Math.min(1, (now - start) / dur);
-      const eased = 1 - Math.pow(1 - t, 4);
-      const cur = Math.floor(eased * target);
-      el.textContent = cur.toLocaleString('en-US') + suffix;
-      if (t < 1) requestAnimationFrame(tick);
-      else el.textContent = target.toLocaleString('en-US') + suffix;
+  const svg = document.getElementById('view-network');
+  if (!svg) return;
+  const nodes = svg.querySelector('#net-nodes');
+  const edges = svg.querySelector('#net-edges');
+  const cx = 400, cy = 280;
+  // master at center, others around
+  const positions = {
+    main:    [cx, cy],
+    neo:     [cx - 240, cy - 120],
+    perf:    [cx + 240, cy - 120],
+    peri:    [cx - 240, cy + 120],
+    syn:     [cx + 240, cy + 120],
+    sister:  [cx - 300, cy],
+    wow:     [cx + 300, cy],
+    author:  [cx, cy - 200],
+    portal:  [cx, cy + 200]
+  };
+  // edges: every corpus connects to main + some peer-connections
+  const peerEdges = [
+    ['neo','peri'],['perf','wow'],['sister','wow'],['sister','neo'],['author','main'],['portal','main'],
+    ['peri','syn'],['perf','neo']
+  ];
+  CORPORA.forEach(c => {
+    if (c.id !== 'main') {
+      const [x1,y1] = positions['main']; const [x2,y2] = positions[c.id];
+      const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+      line.setAttribute('x1', x1); line.setAttribute('y1', y1);
+      line.setAttribute('x2', x2); line.setAttribute('y2', y2);
+      line.setAttribute('stroke', 'url(#edgeGrad)');
+      line.setAttribute('stroke-width', '1');
+      line.setAttribute('class','edge-line');
+      edges.appendChild(line);
     }
-    requestAnimationFrame(tick);
-  }
-  if ('IntersectionObserver' in window){
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting && !e.target.dataset.animated){
-          e.target.dataset.animated = '1';
-          animate(e.target);
-          obs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.4 });
-    nums.forEach(n => obs.observe(n));
-  }
+  });
+  peerEdges.forEach(([a,b]) => {
+    const [x1,y1] = positions[a]; const [x2,y2] = positions[b];
+    const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+    line.setAttribute('x1', x1); line.setAttribute('y1', y1);
+    line.setAttribute('x2', x2); line.setAttribute('y2', y2);
+    line.setAttribute('stroke', '#1d1d38'); line.setAttribute('stroke-width', '0.6');
+    line.setAttribute('class','edge-line');
+    edges.appendChild(line);
+  });
+  CORPORA.forEach(c => {
+    const [x,y] = positions[c.id];
+    const r = c.id === 'main' ? 38 : 20;
+    const g = document.createElementNS('http://www.w3.org/2000/svg','g');
+    const a = document.createElementNS('http://www.w3.org/2000/svg','a');
+    a.setAttributeNS('http://www.w3.org/1999/xlink','xlink:href',c.url);
+    a.setAttribute('href', c.url);
+    const circ = document.createElementNS('http://www.w3.org/2000/svg','circle');
+    circ.setAttribute('cx', x); circ.setAttribute('cy', y); circ.setAttribute('r', r);
+    circ.setAttribute('fill', c.id === 'main' ? 'url(#nodeGrad-center)' : (c.kind === 'companion' ? 'url(#nodeGrad-peri)' : 'url(#nodeGrad-warm)'));
+    circ.setAttribute('stroke', c.col); circ.setAttribute('stroke-width','1.5');
+    circ.setAttribute('class','node-circle');
+    const label = document.createElementNS('http://www.w3.org/2000/svg','text');
+    label.setAttribute('x', x); label.setAttribute('y', y + r + 18);
+    label.setAttribute('text-anchor','middle');
+    label.setAttribute('fill', '#f2f2fa'); label.setAttribute('font-size','13');
+    label.setAttribute('font-weight','600'); label.setAttribute('class','node-label');
+    label.textContent = c.short;
+    a.appendChild(circ); a.appendChild(label);
+    g.appendChild(a);
+    nodes.appendChild(g);
+  });
+})();
+
+// === Render Solar System ===
+(function(){
+  const svg = document.getElementById('view-solar');
+  if (!svg) return;
+  const orbits = svg.querySelector('#solar-orbits');
+  const planets = svg.querySelector('#solar-planets');
+  const cx = 400, cy = 280;
+  // 8 planets around the sun (main), arranged at different radii
+  const layout = [
+    {id:'neo',     r:90,  a:30},
+    {id:'perf',    r:90,  a:180},
+    {id:'peri',    r:140, a:80},
+    {id:'syn',     r:140, a:200},
+    {id:'sister',  r:190, a:130},
+    {id:'wow',     r:190, a:330},
+    {id:'author',  r:240, a:230},
+    {id:'portal',  r:240, a:50}
+  ];
+  // orbital paths
+  [...new Set(layout.map(l => l.r))].forEach(r => {
+    const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
+    c.setAttribute('cx', cx); c.setAttribute('cy', cy); c.setAttribute('r', r);
+    c.setAttribute('fill','none'); c.setAttribute('stroke','#1d1d38'); c.setAttribute('stroke-width','0.5');
+    c.setAttribute('stroke-dasharray','2,4');
+    orbits.appendChild(c);
+  });
+  // sun
+  const sunNode = CORPORA.find(c => c.id === 'main');
+  const sunA = document.createElementNS('http://www.w3.org/2000/svg','a');
+  sunA.setAttribute('href', sunNode.url);
+  const sun = document.createElementNS('http://www.w3.org/2000/svg','circle');
+  sun.setAttribute('cx', cx); sun.setAttribute('cy', cy); sun.setAttribute('r', 40);
+  sun.setAttribute('fill','url(#sun)'); sun.setAttribute('class','node-circle');
+  const sunLabel = document.createElementNS('http://www.w3.org/2000/svg','text');
+  sunLabel.setAttribute('x', cx); sunLabel.setAttribute('y', cy + 58); sunLabel.setAttribute('text-anchor','middle');
+  sunLabel.setAttribute('fill','#f2f2fa'); sunLabel.setAttribute('font-size','14'); sunLabel.setAttribute('font-weight','700');
+  sunLabel.setAttribute('class','node-label'); sunLabel.textContent = 'Main library';
+  sunA.appendChild(sun); sunA.appendChild(sunLabel); planets.appendChild(sunA);
+  // planets
+  layout.forEach(p => {
+    const c = CORPORA.find(x => x.id === p.id);
+    const x = cx + Math.cos(p.a * Math.PI / 180) * p.r;
+    const y = cy + Math.sin(p.a * Math.PI / 180) * p.r;
+    const r = 8 + Math.log10(c.size + 10) * 3;
+    const a = document.createElementNS('http://www.w3.org/2000/svg','a');
+    a.setAttribute('href', c.url);
+    const circ = document.createElementNS('http://www.w3.org/2000/svg','circle');
+    circ.setAttribute('cx', x); circ.setAttribute('cy', y); circ.setAttribute('r', r);
+    circ.setAttribute('fill', c.col); circ.setAttribute('fill-opacity','0.55');
+    circ.setAttribute('stroke', c.col); circ.setAttribute('stroke-width','1.5');
+    circ.setAttribute('class','node-circle');
+    const label = document.createElementNS('http://www.w3.org/2000/svg','text');
+    label.setAttribute('x', x); label.setAttribute('y', y + r + 16);
+    label.setAttribute('text-anchor','middle'); label.setAttribute('fill','#a8a8c8');
+    label.setAttribute('font-size','12'); label.setAttribute('font-weight','500');
+    label.setAttribute('class','node-label'); label.textContent = c.short;
+    a.appendChild(circ); a.appendChild(label); planets.appendChild(a);
+  });
+})();
+
+// === Render Grid ===
+(function(){
+  const svg = document.getElementById('view-periodic');
+  if (!svg) return;
+  const cells = svg.querySelector('#grid-cells');
+  // 3x3 grid
+  const cols = 3, rows = 3;
+  const cellW = 220, cellH = 140, gap = 16;
+  const totalW = cols * cellW + (cols - 1) * gap;
+  const totalH = rows * cellH + (rows - 1) * gap;
+  const offsetX = (800 - totalW) / 2;
+  const offsetY = (560 - totalH) / 2;
+  CORPORA.forEach((c, i) => {
+    const col = i % cols, row = Math.floor(i / cols);
+    const x = offsetX + col * (cellW + gap);
+    const y = offsetY + row * (cellH + gap);
+    const a = document.createElementNS('http://www.w3.org/2000/svg','a');
+    a.setAttribute('href', c.url);
+    const rect = document.createElementNS('http://www.w3.org/2000/svg','rect');
+    rect.setAttribute('x', x); rect.setAttribute('y', y);
+    rect.setAttribute('width', cellW); rect.setAttribute('height', cellH);
+    rect.setAttribute('rx', 12);
+    rect.setAttribute('fill', '#10101f'); rect.setAttribute('stroke', c.col);
+    rect.setAttribute('stroke-width','1.5'); rect.setAttribute('class','node-circle');
+    const num = document.createElementNS('http://www.w3.org/2000/svg','text');
+    num.setAttribute('x', x + 16); num.setAttribute('y', y + 28);
+    num.setAttribute('fill', c.col); num.setAttribute('font-size','11');
+    num.setAttribute('font-weight','700'); num.setAttribute('class','node-label');
+    num.setAttribute('letter-spacing','0.1em'); num.textContent = String(i + 1).padStart(2, '0');
+    const name = document.createElementNS('http://www.w3.org/2000/svg','text');
+    name.setAttribute('x', x + 16); name.setAttribute('y', y + cellH / 2 + 4);
+    name.setAttribute('fill','#f2f2fa'); name.setAttribute('font-size','17');
+    name.setAttribute('font-weight','700'); name.setAttribute('class','node-label');
+    name.textContent = c.short;
+    const sub = document.createElementNS('http://www.w3.org/2000/svg','text');
+    sub.setAttribute('x', x + 16); sub.setAttribute('y', y + cellH - 16);
+    sub.setAttribute('fill','#74749a'); sub.setAttribute('font-size','11');
+    sub.setAttribute('class','node-label');
+    sub.textContent = c.size > 100 ? c.size.toLocaleString() + ' items' : (c.size > 1 ? c.size + ' items' : c.kind);
+    a.appendChild(rect); a.appendChild(num); a.appendChild(name); a.appendChild(sub);
+    cells.appendChild(a);
+  });
+})();
+
+// === Render Tree ===
+(function(){
+  const svg = document.getElementById('view-tree');
+  if (!svg) return;
+  const nodes = svg.querySelector('#tree-nodes');
+  const edges = svg.querySelector('#tree-edges');
+  // root: Main library; 3 mid-level groups; leaves: corpora
+  const groups = [
+    { id: 'central', label: 'Central', x: 200, y: 270, children: ['main', 'portal'] },
+    { id: 'mirrors', label: 'Mirrors',  x: 400, y: 270, children: ['neo', 'sister', 'wow'] },
+    { id: 'tools',   label: 'Tools',    x: 600, y: 270, children: ['perf', 'peri', 'syn'] }
+  ];
+  const rootX = 400, rootY = 80;
+  // root → group edges
+  groups.forEach(g => {
+    const path = document.createElementNS('http://www.w3.org/2000/svg','path');
+    const d = `M${rootX},${rootY + 14} C${rootX},${(rootY + g.y) / 2} ${g.x},${(rootY + g.y) / 2} ${g.x},${g.y - 14}`;
+    path.setAttribute('d', d); path.setAttribute('stroke', '#1d1d38'); path.setAttribute('fill','none'); path.setAttribute('stroke-width','1');
+    edges.appendChild(path);
+  });
+  // root
+  const rootCirc = document.createElementNS('http://www.w3.org/2000/svg','circle');
+  rootCirc.setAttribute('cx', rootX); rootCirc.setAttribute('cy', rootY); rootCirc.setAttribute('r', 14);
+  rootCirc.setAttribute('fill','url(#nodeGrad-center)'); rootCirc.setAttribute('stroke','#2ee0ff'); rootCirc.setAttribute('stroke-width','1.5');
+  const rootLabel = document.createElementNS('http://www.w3.org/2000/svg','text');
+  rootLabel.setAttribute('x', rootX); rootLabel.setAttribute('y', rootY - 24); rootLabel.setAttribute('text-anchor','middle');
+  rootLabel.setAttribute('fill','#f2f2fa'); rootLabel.setAttribute('font-size','15'); rootLabel.setAttribute('font-weight','700');
+  rootLabel.setAttribute('class','node-label'); rootLabel.textContent = 'AUGMANITAI Programme';
+  nodes.appendChild(rootCirc); nodes.appendChild(rootLabel);
+  // groups + leaves
+  groups.forEach(g => {
+    const gLabel = document.createElementNS('http://www.w3.org/2000/svg','text');
+    gLabel.setAttribute('x', g.x); gLabel.setAttribute('y', g.y - 24); gLabel.setAttribute('text-anchor','middle');
+    gLabel.setAttribute('fill','#74749a'); gLabel.setAttribute('font-size','11'); gLabel.setAttribute('font-weight','700');
+    gLabel.setAttribute('letter-spacing','0.12em'); gLabel.setAttribute('class','node-label');
+    gLabel.textContent = g.label.toUpperCase();
+    nodes.appendChild(gLabel);
+    const groupY = g.y;
+    const leafCount = g.children.length;
+    const leafSpacing = 100;
+    const startX = g.x - ((leafCount - 1) * leafSpacing) / 2;
+    g.children.forEach((cid, i) => {
+      const c = CORPORA.find(x => x.id === cid);
+      const lx = startX + i * leafSpacing;
+      const ly = groupY + 130;
+      // edge
+      const path = document.createElementNS('http://www.w3.org/2000/svg','path');
+      const d = `M${g.x},${g.y + 14} C${g.x},${(g.y + ly) / 2} ${lx},${(g.y + ly) / 2} ${lx},${ly - 12}`;
+      path.setAttribute('d', d); path.setAttribute('stroke', '#1d1d38'); path.setAttribute('fill','none'); path.setAttribute('stroke-width','1');
+      edges.appendChild(path);
+      // leaf
+      const a = document.createElementNS('http://www.w3.org/2000/svg','a');
+      a.setAttribute('href', c.url);
+      const circ = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      circ.setAttribute('cx', lx); circ.setAttribute('cy', ly); circ.setAttribute('r', 12);
+      circ.setAttribute('fill', c.col); circ.setAttribute('fill-opacity','0.5');
+      circ.setAttribute('stroke', c.col); circ.setAttribute('stroke-width','1.5');
+      circ.setAttribute('class','node-circle');
+      const label = document.createElementNS('http://www.w3.org/2000/svg','text');
+      label.setAttribute('x', lx); label.setAttribute('y', ly + 28); label.setAttribute('text-anchor','middle');
+      label.setAttribute('fill','#a8a8c8'); label.setAttribute('font-size','11'); label.setAttribute('font-weight','500');
+      label.setAttribute('class','node-label'); label.textContent = c.short;
+      a.appendChild(circ); a.appendChild(label); nodes.appendChild(a);
+    });
+  });
+})();
+
+// === Render Bubble Pack ===
+(function(){
+  const svg = document.getElementById('view-bubble');
+  if (!svg) return;
+  const bubbles = svg.querySelector('#bubble-bubbles');
+  // size = sqrt(items)
+  const items = CORPORA.map(c => ({...c, r: 18 + Math.sqrt(c.size) * 1.8}));
+  // simple manual layout — main in center, others packed around
+  const layout = {
+    main:   { x: 400, y: 280 },
+    neo:    { x: 580, y: 220 },
+    perf:   { x: 250, y: 200 },
+    peri:   { x: 600, y: 380 },
+    syn:    { x: 220, y: 380 },
+    sister: { x: 460, y: 460 },
+    wow:    { x: 700, y: 290 },
+    author: { x: 130, y: 290 },
+    portal: { x: 350, y: 460 }
+  };
+  items.forEach(c => {
+    const pos = layout[c.id]; if (!pos) return;
+    const a = document.createElementNS('http://www.w3.org/2000/svg','a');
+    a.setAttribute('href', c.url);
+    const circ = document.createElementNS('http://www.w3.org/2000/svg','circle');
+    circ.setAttribute('cx', pos.x); circ.setAttribute('cy', pos.y); circ.setAttribute('r', c.r);
+    circ.setAttribute('fill', c.col); circ.setAttribute('fill-opacity','0.18');
+    circ.setAttribute('stroke', c.col); circ.setAttribute('stroke-width','1.5');
+    circ.setAttribute('class','node-circle');
+    const label = document.createElementNS('http://www.w3.org/2000/svg','text');
+    label.setAttribute('x', pos.x); label.setAttribute('y', pos.y + 4);
+    label.setAttribute('text-anchor','middle'); label.setAttribute('fill','#f2f2fa');
+    label.setAttribute('font-size','13'); label.setAttribute('font-weight','600');
+    label.setAttribute('class','node-label'); label.textContent = c.short;
+    const sub = document.createElementNS('http://www.w3.org/2000/svg','text');
+    sub.setAttribute('x', pos.x); sub.setAttribute('y', pos.y + 20);
+    sub.setAttribute('text-anchor','middle'); sub.setAttribute('fill','#a8a8c8');
+    sub.setAttribute('font-size','10'); sub.setAttribute('class','node-label');
+    sub.textContent = c.size > 100 ? c.size.toLocaleString() : (c.size > 1 ? c.size + ' items' : '');
+    a.appendChild(circ); a.appendChild(label); a.appendChild(sub); bubbles.appendChild(a);
+  });
+})();
+
+// === Tab switcher ===
+(function(){
+  const tabs = document.querySelectorAll('.viewer-tab');
+  const modes = document.querySelectorAll('.view-mode');
+  const caption = document.getElementById('viewCaption');
+  tabs.forEach(t => {
+    t.addEventListener('click', () => {
+      tabs.forEach(x => { x.classList.remove('active'); x.setAttribute('aria-selected','false'); });
+      modes.forEach(m => m.classList.remove('active'));
+      t.classList.add('active'); t.setAttribute('aria-selected','true');
+      const view = t.dataset.view;
+      document.getElementById('view-' + view)?.classList.add('active');
+      if (caption && CAPTIONS[view]) caption.innerHTML = CAPTIONS[view];
+    });
+  });
 })();
 </script>
 </body>
