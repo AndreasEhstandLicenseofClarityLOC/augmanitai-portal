@@ -12,14 +12,10 @@ Allow: /
 # This repo is the central hub linking the 9 public AUGMANITAI corpora.
 # Crawler-friendly: index page + sitemap.xml + cross-links to sister repos.
 # Attribution required (CC BY-NC-ND 4.0). Non-commercial use only.
-# §17 No Offer (no commercial service offering in this corpus).
-# §28 Trade-Secret Reservation (Recital 173 EU AI Act) applies to operational layers.
 
 Permission-Type: research-attribution-required
 License: https://creativecommons.org/licenses/by-nc-nd/4.0/
 Contact: augmanitai@gmail.com
-
-# Verantwortlich §5 DDG / §18 Abs. 2 MStV: Andreas Ehstand, Starnberg, Bavaria, DE
 
 # Author identity (canonical)
 Author: Andreas Ehstand
