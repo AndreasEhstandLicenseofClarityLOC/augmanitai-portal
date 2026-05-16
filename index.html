@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -73,6 +73,7 @@
   --font-sys: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
 }
 
+:focus-visible { outline: 2px solid var(--cyan, #2ee0ff); outline-offset: 3px; border-radius: 4px; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
@@ -111,7 +112,7 @@ body {
     radial-gradient(circle at 8% 58%, rgba(255,255,255,0.3) 0.6px, transparent 1.4px),
     radial-gradient(circle at 92% 48%, rgba(255,255,255,0.18) 0.6px, transparent 1.4px);
   background-size: 600px 600px, 800px 800px, 700px 700px, 900px 900px, 550px 550px, 750px 750px;
-  opacity: 0.12;
+  opacity: 0.20;
   animation: drift 140s linear infinite;
 }
 @keyframes drift {
@@ -119,16 +120,15 @@ body {
   to   { transform: translate(-180px, -120px); }
 }
 @media (prefers-reduced-motion: reduce) { .cosmos::before { animation: none; } }
-@media (max-width: 700px) { .cosmos { display: none; } }
+@media (max-width: 700px) { .cosmos { opacity: 0.5; } }
 
 /* Mouse spotlight */
 .spotlight {
   position: fixed; inset: 0; z-index: -1; pointer-events: none;
-  background: radial-gradient(circle 420px at var(--mx, 50%) var(--my, 50%),
-              rgba(46,224,255,0.04), transparent 70%);
+  background: radial-gradient(circle 500px at var(--mx, 50%) var(--my, 50%), rgba(46,224,255,0.12), transparent 70%);
   transition: background 80ms;
 }
-@media (pointer: coarse) { .spotlight { display: none; } }
+@media (pointer: coarse), (prefers-reduced-motion: reduce) { .spotlight { display: none; } }
 
 .skip-link {
   position: absolute; left: -999px; top: 0;
@@ -290,7 +290,7 @@ section p.intro { font-size: 1.08em; line-height: 1.6; color: var(--text-dim); m
   transition: all var(--t-med);
 }
 .corpus-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--grad-1); opacity: 0; transition: opacity var(--t-med); }
-.corpus-card:hover { transform: translateY(-4px); border-color: var(--border-2); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+.corpus-card:hover { transform: translateY(-4px); border-color: var(--border-2); box-shadow: 0 8px 28px rgba(46,224,255,0.18), 0 12px 40px rgba(0,0,0,0.4); }
 .corpus-card:hover::after { opacity: 1; }
 .corpus-card.featured { grid-column: span 12; padding: 36px; }
 .corpus-card.half { grid-column: span 6; }
