@@ -242,7 +242,7 @@ section p.intro { font-size: 1.08em; line-height: 1.6; color: var(--text-dim); m
   border-bottom: 1px solid var(--border);
 }
 .viewer-tab {
-  padding: 8px 14px; background: var(--bg-2);
+  padding: 10px 16px; min-height: 44px; background: var(--bg-2);
   border: 1px solid var(--border); border-radius: 8px;
   font-size: 0.88em; font-weight: 500; color: var(--text-dim);
   cursor: pointer; font-family: var(--font-sys);
@@ -568,27 +568,27 @@ footer .footer-bottom { border-top: 1px solid var(--border); padding-top: 22px; 
 
     <div class="viewer">
       <div class="viewer-tabs" role="tablist">
-        <button class="viewer-tab active" data-view="network" role="tab" aria-selected="true">
+        <button type="button" class="viewer-tab active" data-view="network" role="tab" aria-selected="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="13" r="2"/><circle cx="5" cy="20" r="2"/><circle cx="19" cy="20" r="2"/><path d="M5 8v10M19 8v10M7 6h10M7 20h10M6.5 7l4.5 5M17.5 7l-4.5 5M6.5 19l4.5-6M17.5 19l-4.5-6"/></svg>
           Network
         </button>
-        <button class="viewer-tab" data-view="solar" role="tab" aria-selected="false">
+        <button type="button" class="viewer-tab" data-view="solar" role="tab" aria-selected="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg>
           Solar System
         </button>
-        <button class="viewer-tab" data-view="periodic" role="tab" aria-selected="false">
+        <button type="button" class="viewer-tab" data-view="periodic" role="tab" aria-selected="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="5" height="5"/><rect x="10" y="3" width="5" height="5"/><rect x="17" y="3" width="5" height="5"/><rect x="3" y="10" width="5" height="5"/><rect x="10" y="10" width="5" height="5"/><rect x="3" y="17" width="5" height="5"/><rect x="10" y="17" width="5" height="5"/><rect x="17" y="17" width="5" height="5"/></svg>
           Grid
         </button>
-        <button class="viewer-tab" data-view="tree" role="tab" aria-selected="false">
+        <button type="button" class="viewer-tab" data-view="tree" role="tab" aria-selected="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="3" r="1.5"/><circle cx="6" cy="12" r="1.5"/><circle cx="18" cy="12" r="1.5"/><circle cx="3" cy="21" r="1.5"/><circle cx="9" cy="21" r="1.5"/><circle cx="15" cy="21" r="1.5"/><circle cx="21" cy="21" r="1.5"/><path d="M12 5v5l-6 1M12 10l6 1M6 14v5l-3 1M6 14l3 6M18 14v5l-3 1M18 14l3 6"/></svg>
           Tree
         </button>
-        <button class="viewer-tab" data-view="bubble" role="tab" aria-selected="false">
+        <button type="button" class="viewer-tab" data-view="bubble" role="tab" aria-selected="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5"/><circle cx="17" cy="16" r="3"/><circle cx="6" cy="18" r="2"/></svg>
           Bubble
         </button>
-        <button class="viewer-tab" data-view="space" role="tab" aria-selected="false">
+        <button type="button" class="viewer-tab" data-view="space" role="tab" aria-selected="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
           3D Space
         </button>
@@ -1343,19 +1343,34 @@ const CAPTIONS = {
   tick();
 })();
 
-// === Tab switcher ===
+// === Tab switcher (with URL hash sync + brand-to-top) ===
 (function(){
   const tabs = document.querySelectorAll('.viewer-tab');
   const modes = document.querySelectorAll('.view-mode');
   const caption = document.getElementById('viewCaption');
+  function activate(view, fromHash){
+    const t = Array.from(tabs).find(x => x.dataset.view === view);
+    if (!t) return;
+    tabs.forEach(x => { x.classList.remove('active'); x.setAttribute('aria-selected','false'); });
+    modes.forEach(m => m.classList.remove('active'));
+    t.classList.add('active'); t.setAttribute('aria-selected','true');
+    document.getElementById('view-' + view)?.classList.add('active');
+    if (caption && CAPTIONS[view]) caption.innerHTML = CAPTIONS[view];
+    if (!fromHash) { try { history.replaceState(null, '', '#view-' + view); } catch(e){} }
+  }
   tabs.forEach(t => {
-    t.addEventListener('click', () => {
-      tabs.forEach(x => { x.classList.remove('active'); x.setAttribute('aria-selected','false'); });
-      modes.forEach(m => m.classList.remove('active'));
-      t.classList.add('active'); t.setAttribute('aria-selected','true');
-      const view = t.dataset.view;
-      document.getElementById('view-' + view)?.classList.add('active');
-      if (caption && CAPTIONS[view]) caption.innerHTML = CAPTIONS[view];
+    t.addEventListener('click', () => activate(t.dataset.view, false));
+  });
+  window.addEventListener('hashchange', () => {
+    const m = (location.hash || '').match(/^#view-([a-z]+)$/);
+    if (m) activate(m[1], true);
+  });
+  const initMatch = (location.hash || '').match(/^#view-([a-z]+)$/);
+  if (initMatch) activate(initMatch[1], true);
+  document.querySelectorAll('.brand, .nav-brand').forEach(b => {
+    b.addEventListener('click', e => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
 })();
