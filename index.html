@@ -96,9 +96,9 @@ body {
 .cosmos {
   position: fixed; inset: 0; z-index: -2;
   background:
-    radial-gradient(ellipse 700px 900px at 12% 8%, rgba(46,224,255,0.14), transparent 50%),
-    radial-gradient(ellipse 800px 1000px at 88% 92%, rgba(138,93,255,0.12), transparent 50%),
-    radial-gradient(ellipse 500px 700px at 55% 45%, rgba(255,95,160,0.06), transparent 50%);
+    radial-gradient(ellipse 700px 900px at 12% 8%, rgba(46,224,255,0.05), transparent 50%),
+    radial-gradient(ellipse 800px 1000px at 88% 92%, rgba(138,93,255,0.04), transparent 50%),
+    radial-gradient(ellipse 500px 700px at 55% 45%, rgba(255,95,160,0.02), transparent 50%);
   pointer-events: none;
 }
 .cosmos::before {
@@ -111,21 +111,24 @@ body {
     radial-gradient(circle at 8% 58%, rgba(255,255,255,0.3) 0.6px, transparent 1.4px),
     radial-gradient(circle at 92% 48%, rgba(255,255,255,0.18) 0.6px, transparent 1.4px);
   background-size: 600px 600px, 800px 800px, 700px 700px, 900px 900px, 550px 550px, 750px 750px;
-  opacity: 0.6;
+  opacity: 0.12;
   animation: drift 140s linear infinite;
 }
 @keyframes drift {
   from { transform: translate(0,0); }
   to   { transform: translate(-180px, -120px); }
 }
+@media (prefers-reduced-motion: reduce) { .cosmos::before { animation: none; } }
+@media (max-width: 700px) { .cosmos { display: none; } }
 
 /* Mouse spotlight */
 .spotlight {
   position: fixed; inset: 0; z-index: -1; pointer-events: none;
   background: radial-gradient(circle 420px at var(--mx, 50%) var(--my, 50%),
-              rgba(46,224,255,0.07), transparent 70%);
+              rgba(46,224,255,0.04), transparent 70%);
   transition: background 80ms;
 }
+@media (pointer: coarse) { .spotlight { display: none; } }
 
 .skip-link {
   position: absolute; left: -999px; top: 0;
@@ -908,7 +911,7 @@ footer .footer-bottom { border-top: 1px solid var(--border); padding-top: 22px; 
 // === Mouse spotlight ===
 (function(){
   const sp = document.getElementById('spotlight');
-  if (!sp || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!sp || matchMedia('(prefers-reduced-motion: reduce)').matches || matchMedia('(pointer: coarse)').matches) return;
   let rafId;
   document.addEventListener('mousemove', e => {
     if (rafId) return;
