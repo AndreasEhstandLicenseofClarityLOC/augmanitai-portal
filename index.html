@@ -206,7 +206,8 @@ nav.top a.link:hover { color: var(--text); background: var(--surface); }
 .btn svg { width: 16px; height: 16px; }
 
 /* Sections */
-section { padding: 80px 24px; scroll-margin-top: 80px; position: relative; }
+section { padding: 80px 24px; scroll-margin-top: 70px; position: relative; }
+section.reveal-force, section .reveal-force { opacity: 1 !important; transform: none !important; }
 section .container { padding: 0; }
 .eyebrow { display: inline-block; font-size: 0.78em; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cyan); font-weight: 600; margin-bottom: 14px; }
 section h2 { font-size: clamp(1.8em, 4vw, 2.6em); line-height: 1.05; letter-spacing: -0.025em; font-weight: 800; margin-bottom: 16px; max-width: 22ch; }
@@ -1136,9 +1137,9 @@ const CAPTIONS = {
   const edges = svg.querySelector('#tree-edges');
   // root: Main library; 3 mid-level groups; leaves: corpora
   const groups = [
-    { id: 'central', label: 'Central', x: 200, y: 270, children: ['main', 'portal'] },
+    { id: 'central', label: 'Central', x: 120, y: 270, children: ['main', 'portal'] },
     { id: 'mirrors', label: 'Mirrors',  x: 400, y: 270, children: ['neo', 'sister', 'wow'] },
-    { id: 'tools',   label: 'Tools',    x: 600, y: 270, children: ['perf', 'peri', 'syn'] }
+    { id: 'tools',   label: 'Tools',    x: 680, y: 270, children: ['perf', 'peri', 'syn'] }
   ];
   const rootX = 400, rootY = 80;
   // root → group edges
@@ -1167,7 +1168,7 @@ const CAPTIONS = {
     nodes.appendChild(gLabel);
     const groupY = g.y;
     const leafCount = g.children.length;
-    const leafSpacing = 100;
+    const leafSpacing = 95;
     const startX = g.x - ((leafCount - 1) * leafSpacing) / 2;
     g.children.forEach((cid, i) => {
       const c = CORPORA.find(x => x.id === cid);
@@ -1371,6 +1372,22 @@ const CAPTIONS = {
     b.addEventListener('click', e => {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+  // Hero CTAs + nav-link in-page anchors: smooth scroll + force-reveal target
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href || href === '#' || href.startsWith('#view-')) return;
+      const target = document.querySelector(href);
+      if (!target) return;
+      e.preventDefault();
+      // Force-reveal target + all .reveal children so user never sees blank
+      target.classList.add('in', 'reveal-force');
+      target.querySelectorAll('.reveal').forEach(r => r.classList.add('in', 'reveal-force'));
+      const top = target.getBoundingClientRect().top + window.pageYOffset - 60;
+      window.scrollTo({ top, behavior: 'smooth' });
+      history.replaceState(null, '', href);
     });
   });
 })();
