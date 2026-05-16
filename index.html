@@ -1378,21 +1378,54 @@ const CAPTIONS = {
     });
   });
   // Hero CTAs + nav-link in-page anchors: smooth scroll + force-reveal target
+  function forceRevealTarget(href){
+    if (!href || href === '#' || href.startsWith('#view-')) return null;
+    const target = document.querySelector(href);
+    if (!target) return null;
+    target.classList.add('in', 'reveal-force');
+    target.querySelectorAll('.reveal').forEach(r => r.classList.add('in', 'reveal-force'));
+    return target;
+  }
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const href = a.getAttribute('href');
-      if (!href || href === '#' || href.startsWith('#view-')) return;
-      const target = document.querySelector(href);
+      const target = forceRevealTarget(href);
       if (!target) return;
       e.preventDefault();
-      // Force-reveal target + all .reveal children so user never sees blank
-      target.classList.add('in', 'reveal-force');
-      target.querySelectorAll('.reveal').forEach(r => r.classList.add('in', 'reveal-force'));
       const top = target.getBoundingClientRect().top + window.pageYOffset - 60;
       window.scrollTo({ top, behavior: 'smooth' });
       history.replaceState(null, '', href);
     });
   });
+  // On-page-load + on-hashchange: if URL has anchor, force-reveal that section AND every
+  // section ABOVE it (so user scrolling back up doesn't hit blank reveal-zero sections).
+  function revealAllUpToHash(){
+    const h = location.hash;
+    if (!h || h.startsWith('#view-')) return;
+    const target = document.querySelector(h);
+    if (!target) return;
+    // Force-reveal all sections from top until past target
+    const targetTop = target.getBoundingClientRect().top + window.pageYOffset;
+    document.querySelectorAll('section.reveal, section .reveal, .reveal').forEach(el => {
+      const t = el.getBoundingClientRect().top + window.pageYOffset;
+      if (t <= targetTop + 200) {
+        el.classList.add('in', 'reveal-force');
+      }
+    });
+    // Re-scroll after reveal so target lands correctly (browser default scroll fired before reveal)
+    setTimeout(() => {
+      const top2 = target.getBoundingClientRect().top + window.pageYOffset - 60;
+      window.scrollTo({ top: top2, behavior: 'auto' });
+    }, 50);
+  }
+  if (location.hash) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', revealAllUpToHash);
+    } else {
+      revealAllUpToHash();
+    }
+  }
+  window.addEventListener('hashchange', revealAllUpToHash);
 })();
 </script>
 </body>
