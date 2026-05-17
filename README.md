@@ -6,7 +6,7 @@ Central landing page for the AUGMANITAI research programme by Andreas Ehstand.
 Phenomenology of human-AI interaction across 9 sister corpora.
 
 ## Author
-- Andreas Ehstand, M.Ed. — AI Researcher
+- Andreas Ehstand — AI Researcher
 - ORCID: 0009-0006-3773-7796
 - Wikidata Person: Q138634675
 - Wikidata Programme: Q138522830
