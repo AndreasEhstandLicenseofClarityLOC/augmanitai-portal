@@ -1444,5 +1444,62 @@ const CAPTIONS = {
   window.addEventListener('hashchange', revealAllUpToHash);
 })();
 </script>
+<!-- aug-onboarding-v1 -->
+<style>
+.aug-onboard-overlay{position:fixed;inset:0;z-index:9999;background:rgba(5,5,16,.85);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:20px}
+.aug-onboard-overlay.show{display:flex}
+.aug-onboard-card{max-width:520px;width:100%;background:var(--surface,#10101f);border:1px solid rgba(46,224,255,.3);border-radius:16px;padding:32px 28px;color:var(--text,#f2f2fa);font-family:ui-sans-serif,system-ui,sans-serif;box-shadow:0 16px 48px rgba(0,0,0,.6),0 0 32px rgba(46,224,255,.15)}
+.aug-onboard-card h2{font-size:1.5em;margin-bottom:12px;font-weight:800;background:linear-gradient(135deg,#2ee0ff,#8a5dff,#ff5fa0);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.aug-onboard-card p{color:var(--text-dim,#a8a8c8);line-height:1.6;margin-bottom:14px;font-size:.96em}
+.aug-onboard-card ul{list-style:none;padding:0;margin:18px 0}
+.aug-onboard-card li{display:flex;gap:12px;align-items:flex-start;padding:8px 0;color:var(--text,#f2f2fa);font-size:.94em}
+.aug-onboard-card li::before{content:"→";color:#2ee0ff;font-weight:700;flex-shrink:0}
+.aug-onboard-actions{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
+.aug-onboard-btn{min-height:44px;padding:10px 18px;border-radius:8px;border:1px solid rgba(46,224,255,.3);background:rgba(46,224,255,.06);color:#2ee0ff;cursor:pointer;font-weight:600;font-size:.92em;flex:1;transition:all .2s;font-family:inherit}
+.aug-onboard-btn:hover{background:rgba(46,224,255,.12);border-color:rgba(46,224,255,.5)}
+.aug-onboard-btn.primary{background:linear-gradient(135deg,#2ee0ff,#8a5dff);color:#050510;border:none}
+.aug-onboard-btn.primary:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(46,224,255,.3)}
+</style>
+<div class="aug-onboard-overlay" id="augOnboard" role="dialog" aria-modal="true" aria-labelledby="augOnboardTitle">
+  <div class="aug-onboard-card">
+    <h2 id="augOnboardTitle">Welcome to AUGMANITAI</h2>
+    <p>A research library of <strong>32,596 named patterns</strong> that show up when humans and AI systems interact — in classrooms, workplaces, robotics labs, everyday use.</p>
+    <p style="opacity:.85;font-style:italic">Descriptive, not prescriptive. Bilingual EN/DE. CC BY-NC-ND 4.0.</p>
+    <ul>
+      <li>Browse the universe five different ways (network, solar, grid, tree, bubble, 3D)</li>
+      <li>Each page is one observable pattern with a precise definition</li>
+      <li>Free to read, free to cite, free to refute</li>
+    </ul>
+    <div class="aug-onboard-actions">
+      <button type="button" class="aug-onboard-btn primary" onclick="augOnboardClose(true)">Show me the universe</button>
+      <button type="button" class="aug-onboard-btn" onclick="augOnboardClose(false)">Just let me browse</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  if(localStorage.getItem("augOnboardSeen")==="1")return;
+  setTimeout(function(){
+    var ov=document.getElementById("augOnboard");
+    if(ov)ov.classList.add("show");
+  },800);
+  window.augOnboardClose=function(scrollToUniverse){
+    var ov=document.getElementById("augOnboard");
+    if(ov)ov.classList.remove("show");
+    try{localStorage.setItem("augOnboardSeen","1")}catch(e){}
+    if(scrollToUniverse){
+      var u=document.getElementById("universe");
+      if(u){
+        u.classList.add("in","reveal-force");
+        u.querySelectorAll(".reveal").forEach(function(r){r.classList.add("in","reveal-force")});
+        setTimeout(function(){
+          var top=u.getBoundingClientRect().top+window.pageYOffset-60;
+          window.scrollTo({top:top,behavior:"smooth"});
+        },120);
+      }
+    }
+  };
+})();
+</script>
 </body>
 </html>
