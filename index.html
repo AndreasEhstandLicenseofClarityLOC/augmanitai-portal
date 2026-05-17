@@ -478,6 +478,22 @@ footer .footer-bottom { border-top: 1px solid var(--border); padding-top: 22px; 
   background: rgba(5,5,16,0.6); padding: 2px 8px; border-radius: 4px;
   backdrop-filter: blur(4px); pointer-events: none;
 }
+
+/* touch-target-v1 */
+@media (pointer: coarse), (max-width: 800px) {
+  nav a, nav button, footer a, .links a, .footer-bottom a, .aug-sitenav-strip a,
+  .legal-nav a, .topnav a, .aug-sitenav a, .pn-bar a, header a,
+  a.link, a.brand, a.brand-link, a.logo, .corpus-card a, .branch-card a,
+  .domain-card a, .sister-card { min-height: 44px !important; display: inline-flex !important;
+    align-items: center !important; padding-top: 8px !important; padding-bottom: 8px !important; }
+  button { min-height: 44px !important; }
+}
+@media (max-width: 480px) {
+  body { font-size: 16px !important; }
+  h1 { font-size: clamp(1.6em, 6vw, 2.2em) !important; }
+  .container, main, section { padding-left: 16px !important; padding-right: 16px !important; }
+}
+
 </style>
 </head>
 
