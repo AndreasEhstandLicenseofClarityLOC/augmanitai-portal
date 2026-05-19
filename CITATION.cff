@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: "AUGMANITAI Research Programme — Central Portal"
+abstract: "Central landing page for the AUGMANITAI Research Programme by Andreas Ehstand — descriptive phenomenology of human-AI interaction across connected public corpora."
+authors:
+  - family-names: Ehstand
+    given-names: Andreas
+    orcid: "https://orcid.org/0009-0006-3773-7796"
+url: "https://andreasehstandlicenseofclarityloc.github.io/augmanitai-portal/"
+repository-code: "https://github.com/AndreasEhstandLicenseofClarityLOC/augmanitai-portal"
+license: CC-BY-NC-ND-4.0
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20118267"
+    description: "AUGMANITAI Concept-DOI"
+  - type: other
+    value: "https://www.wikidata.org/wiki/Q138522830"
+    description: "AUGMANITAI Research Programme (Wikidata)"
+  - type: other
+    value: "https://www.wikidata.org/wiki/Q138634675"
+    description: "Andreas Ehstand (Wikidata Person)"
+type: software
+date-released: "2026-05-19"
+keywords:
+  - "human-AI interaction"
+  - "phenomenology"
+  - "descriptive terminology"
+  - "research programme"
