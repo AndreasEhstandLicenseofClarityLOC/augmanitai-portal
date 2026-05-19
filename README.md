@@ -1,5 +1,10 @@
 # AUGMANITAI Research Programme — Central Portal
 
+> **Living Document** — Definitions, metadata, and structural references are continuously refined within the Refinement Window (§31, V6 Disclaimer). The current version is the canonical state; previous versions remain accessible via git history and via the immutable Zenodo DOI versions.
+>
+> **Lebendiges Dokument** — Definitionen, Metadaten und strukturelle Referenzen werden kontinuierlich innerhalb des Refinement-Windows verfeinert (§31, V6 Disclaimer). Frühere Versionen via git-Historie und über die unveränderlichen Zenodo-DOI-Versionen.
+
+
 Central landing page for the AUGMANITAI Research Programme by Andreas Ehstand. A descriptive research programme on the phenomenology of human-AI interaction.
 
 **Live:** https://andreasehstandlicenseofclarityloc.github.io/augmanitai-portal/
@@ -32,3 +37,12 @@ Central landing page for the AUGMANITAI Research Programme by Andreas Ehstand. A
 ## License
 
 CC BY-NC-ND 4.0
+
+
+## Verantwortlich
+
+i.S.d. § 5 DDG (Digitale-Dienste-Gesetz) / § 18 Abs. 2 MStV:
+**Andreas Ehstand**, Nepomukweg 7, 82319 Starnberg, Deutschland.
+Kontakt: augmanitai (at) gmail (dot) com.
+
+EU AI Act (Reg. 2024/1689) Art. 50: this site is a static research artifact and does not interact with users via AI.
