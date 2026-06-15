@@ -8,8 +8,8 @@
       "@id": "https://orcid.org/0009-0006-3773-7796",
       "givenName": "Andreas",
       "familyName": "Ehstand",
-      "affiliation": "AUGMANITAI Research Programme",
-      "jobTitle": "AI Researcher",
+      "affiliation": "Augmanitai Research Programme",
+      "jobTitle": "Independent Researcher",
       "email": "augmanitai@gmail.com",
       "sameAs": [
         "https://www.wikidata.org/wiki/Q138634675",
@@ -17,25 +17,19 @@
       ]
     }
   ],
-  "programmingLanguage": [
-    "HTML",
-    "JSON-LD"
-  ],
-  "runtimePlatform": [
-    "Web",
-    "Linked Data Ecosystems"
-  ],
+  "programmingLanguage": ["HTML", "JSON-LD"],
+  "runtimePlatform": ["Web", "Linked Data Ecosystems"],
   "applicationCategory": "Research",
   "developmentStatus": "active",
   "isAccessibleForFree": true,
   "relatedLink": "https://augmanitai.com",
   "dateCreated": "2024-01-01",
-  "dateModified": "2026-05-15",
-  "ai_disclosure": "Content developed with AI assistance. Reviewed and approved by the author.",
+  "dateModified": "2026-06-15",
+  "ai_disclosure": "Content developed with AI assistance and reviewed by the author. AI-assisted content is disclosed per EU AI Act Article 50 (from 2026-08-02).",
   "audience": "Adult users (18+) in academic or professional contexts",
-  "name": "AUGMANITAI Research Programme - Central Portal",
-  "description": "Central landing page for the AUGMANITAI research programme by Andreas Ehstand. Portal connecting 9 sister corpora exploring the phenomenology of human-AI interaction. Aggregates canonical identifiers (ORCID, Wikidata, DOI) and routes visitors to compendium, periodic table, atlas, knowledge graph, and PERMANITAI framework resources.",
-  "version": "1.0",
+  "name": "AUGMANITAI Research Programme — Central Portal",
+  "description": "Central landing page for the AUGMANITAI Research Programme by Andreas Ehstand. Portal connecting the public sister corpora exploring the phenomenology of human-AI interaction. Aggregates canonical identifiers (ORCID, Wikidata, DOI) and routes visitors to compendium, periodic table, atlas, knowledge graph, and methodology resources.",
+  "version": "1.1",
   "applicationSubCategory": "Research Portal / Programme Hub",
   "keywords": [
     "AUGMANITAI",
@@ -47,12 +41,12 @@
     "Andreas Ehstand"
   ],
   "codeRepository": "https://github.com/AndreasEhstandLicenseofClarityLOC/augmanitai-portal",
-  "identifier": "https://doi.org/10.5281/zenodo.20118267",
+  "identifier": "https://doi.org/10.5281/zenodo.20161494",
   "referencePublication": {
     "@type": "ScholarlyArticle",
-    "name": "AUGMANITAI Research Programme: terminology and phenomenology of human-AI interaction",
+    "name": "AUGMANITAI Research Programme — Concept-DOI Master Index V7",
     "author": "Andreas Ehstand",
-    "datePublished": "2024",
-    "identifier": "https://doi.org/10.5281/zenodo.20118267"
+    "datePublished": "2026",
+    "identifier": "https://doi.org/10.5281/zenodo.20161494"
   }
 }
