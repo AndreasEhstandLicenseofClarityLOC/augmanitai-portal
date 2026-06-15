@@ -1,0 +1,66 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://andreasehstandlicenseofclarityloc.github.io/augmanitai-portal/#website",
+      "name": "AUGMANITAI Research Programme — Central Portal",
+      "url": "https://andreasehstandlicenseofclarityloc.github.io/augmanitai-portal/",
+      "inLanguage": ["en", "de"],
+      "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "isPartOf": {
+        "@type": "CreativeWork",
+        "identifier": "https://doi.org/10.5281/zenodo.20161494"
+      },
+      "publisher": { "@id": "https://orcid.org/0009-0006-3773-7796" }
+    },
+    {
+      "@type": "ResearchProject",
+      "@id": "https://andreasehstandlicenseofclarityloc.github.io/augmanitai-portal/#programme",
+      "name": "AUGMANITAI Research Programme",
+      "description": "Descriptive terminology and phenomenology of human-AI interaction. Connected sister corpora.",
+      "url": "https://andreasehstandlicenseofclarityloc.github.io/augmanitai-portal/",
+      "identifier": "https://www.wikidata.org/wiki/Q138522830",
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q138522830",
+        "https://doi.org/10.5281/zenodo.20161494"
+      ],
+      "founder": { "@id": "https://orcid.org/0009-0006-3773-7796" },
+      "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0006-3773-7796",
+      "name": "Andreas Ehstand",
+      "jobTitle": "Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Augmanitai Research Programme"
+      },
+      "sameAs": [
+        "https://orcid.org/0009-0006-3773-7796",
+        "https://www.wikidata.org/wiki/Q138634675",
+        "https://www.wikidata.org/wiki/Q138522830"
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0006-3773-7796"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "AUGMANITAI Prior-Art Collections (2026-06)",
+      "isPartOf": { "@id": "https://andreasehstandlicenseofclarityloc.github.io/augmanitai-portal/#programme" },
+      "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "creator": { "@id": "https://orcid.org/0009-0006-3773-7796" },
+      "hasPart": [
+        { "@type": "Dataset", "identifier": "https://doi.org/10.5281/zenodo.20696419", "name": "Collection 1/5 (papers 001-083)" },
+        { "@type": "Dataset", "identifier": "https://doi.org/10.5281/zenodo.20696547", "name": "Collection 2/5 (papers 084-168)" },
+        { "@type": "Dataset", "identifier": "https://doi.org/10.5281/zenodo.20696555", "name": "Collection 3/5 (papers 169-253)" },
+        { "@type": "Dataset", "identifier": "https://doi.org/10.5281/zenodo.20696573", "name": "Collection 4/5 (papers 254-338)" },
+        { "@type": "Dataset", "identifier": "https://doi.org/10.5281/zenodo.20696583", "name": "Collection 5/5 (papers 339-444)" }
+      ]
+    }
+  ]
+}
