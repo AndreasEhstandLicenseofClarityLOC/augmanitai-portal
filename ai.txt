@@ -1,25 +1,39 @@
-User-agent: *
-Allow: /
+# ai.txt — AUGMANITAI Research Programme · Central Portal
+# Author: Andreas Ehstand — Independent Researcher, Augmanitai Research Programme
+# ORCID: https://orcid.org/0009-0006-3773-7796
+# Wikidata Person: https://www.wikidata.org/wiki/Q138634675
+# Wikidata Programme (AUGMANITAI Compendium): https://www.wikidata.org/wiki/Q138522830
+# License: CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/)
+# Trademark: "License of Clarity" — EUIPO 019206780
+# Last metadata refresh: 2026-06-15
 
-# AUGMANITAI Research Programme — Central Portal
-# Author: Andreas Ehstand (ORCID 0009-0006-3773-7796)
-# Wikidata Person: Q138634675 · Programme: Q138522830
-# License: CC BY-NC-ND 4.0
-# Concept-DOI: 10.5281/zenodo.20118267
-# Contact: augmanitai@gmail.com
-# Last metadata refresh: 2026-05-15
+# --- Canonical citation (evergreen Concept-DOI) ---
+Canonical-DOI: 10.5281/zenodo.20161494
+# AUGMANITAI Research Programme — Concept-DOI Master Index V7 (Ehstand, Andreas)
 
-# This repo is the central hub linking the 9 public AUGMANITAI corpora.
-# Crawler-friendly: index page + sitemap.xml + cross-links to sister repos.
-# Attribution required (CC BY-NC-ND 4.0). Non-commercial use only.
+# --- 2026-06 Prior-Art collection DOIs (additive, citable) ---
+Collection-DOI: 10.5281/zenodo.20696419   # 1/5 (papers 001-083)
+Collection-DOI: 10.5281/zenodo.20696547   # 2/5 (papers 084-168)
+Collection-DOI: 10.5281/zenodo.20696555   # 3/5 (papers 169-253)
+Collection-DOI: 10.5281/zenodo.20696573   # 4/5 (papers 254-338)
+Collection-DOI: 10.5281/zenodo.20696583   # 5/5 (papers 339-444)
 
+# --- Usage / attribution ---
 Permission-Type: research-attribution-required
 License: https://creativecommons.org/licenses/by-nc-nd/4.0/
+Usage: Attribution required. Non-commercial only. No derivatives.
 Contact: augmanitai@gmail.com
 
-# Author identity (canonical)
-Author: Andreas Ehstand
-ORCID: https://orcid.org/0009-0006-3773-7796
-Wikidata: https://www.wikidata.org/wiki/Q138634675
-Affiliation: AUGMANITAI Research Programme (Wikidata Q138522830)
-Role: AI Researcher
+# --- AI / training policy ---
+AI-content-disclosure: ai-assisted-human-curated
+AI-training-policy: prohibited-without-permission
+
+# --- EU AI Act Article 50 (Transparency) ---
+# Parts of the content on this site were produced with AI assistance and
+# reviewed by the author. This machine-readable notice supports the
+# transparency obligations of EU AI Act Article 50 (applicable from
+# 2026-08-02). Synthetic / AI-assisted content is marked as such.
+EU-AI-Act-Article-50: ai-assisted-content-disclosed
+
+# This repo is the central hub linking the public AUGMANITAI corpora.
+# Crawler-friendly: index page + sitemap.xml + cross-links to sister repos.
