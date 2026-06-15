@@ -1,27 +1,32 @@
 # AUGMANITAI Portal
 
-> Central landing page of the AUGMANITAI Research Programme. Nine connected corpora, browsable five different ways.
+> Central landing page of the AUGMANITAI Research Programme. Connected corpora describing the phenomenology of human-AI interaction, browsable several ways.
 
 ## About
 
-This page is part of the **AUGMANITAI Research Programme** by **Andreas Ehstand** — AI Researcher · Human-AI Interaction · Starnberg, Germany. Descriptive phenomenology of patterns observed when humans interact with AI systems.
+This page is part of the **AUGMANITAI Research Programme** by **Andreas Ehstand** — Independent Researcher, Human-AI Interaction (Germany). Descriptive phenomenology of patterns observed when humans interact with AI systems.
+
+Content is AI-assisted and human-curated. Attribution required (CC BY-NC-ND 4.0), non-commercial, no derivatives. Per EU AI Act Article 50 (from 2026-08-02), AI-assisted content is disclosed as such.
 
 ## Identifiers
 
+- Canonical DOI (cite this): https://doi.org/10.5281/zenodo.20161494
 - ORCID: https://orcid.org/0009-0006-3773-7796
-- Wikidata: https://www.wikidata.org/wiki/Q138634675
-- GitHub: https://github.com/AndreasEhstandLicenseofClarityLOC
+- Wikidata (Person): https://www.wikidata.org/wiki/Q138634675
+- Wikidata (Programme): https://www.wikidata.org/wiki/Q138522830
+- Trademark: "License of Clarity" — EUIPO 019206780
 
-## Key Resources Across the Programme
+## 2026-06 Prior-Art collections (additive, citable)
 
-- [Portal](https://andreasehstandlicenseofclarityloc.github.io/augmanitai-portal/) — Central landing for nine connected corpora
-- [Master Compendium](https://andreasehstandlicenseofclarityloc.github.io/augmanitai-stage-0/) — 1,128 defined terms (EN+DE, CC BY-NC-ND 4.0)
-- [Knowledge Graph](https://andreasehstandlicenseofclarityloc.github.io/augmanitai-wow/) — Interactive 79-term selection
-- [Periodic Table](https://andreasehstandlicenseofclarityloc.github.io/augmanitai-periodic-table/) — 100 most representative patterns
-- [Academic Atlas](https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/) — 2,141 academic term pages with machine-readable exports
-- [Performance Framework](https://andreasehstandlicenseofclarityloc.github.io/permanitai-framework/) — PERMANITAI cross-domain methodology
-- [Author](https://andreasehstandlicenseofclarityloc.github.io/andreas-ehstand-entity/) — About Andreas Ehstand
-- [Synmanitai Essay](https://andreasehstandlicenseofclarityloc.github.io/synmanitai/) — Founding methodological essay
+- https://doi.org/10.5281/zenodo.20696419 — collection 1/5
+- https://doi.org/10.5281/zenodo.20696547 — collection 2/5
+- https://doi.org/10.5281/zenodo.20696555 — collection 3/5
+- https://doi.org/10.5281/zenodo.20696573 — collection 4/5
+- https://doi.org/10.5281/zenodo.20696583 — collection 5/5
+
+## Contact
+
+- Programme inquiries: augmanitai@gmail.com
 
 ## License
 
